@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -66,6 +67,10 @@ public class PlayerMovement : MonoBehaviour
         WallSlide();
         _movementSpeedx = _rb.velocity.x;
         _movementSpeedy = _rb.velocity.y;
+        if(Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 
 
@@ -238,6 +243,14 @@ public class PlayerMovement : MonoBehaviour
         {
             ApplyAirLinearDrag();
             FallMultiplier();
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.collider.gameObject.tag == "Spikes")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }
