@@ -24,7 +24,6 @@ public class PlayerMovement : MonoBehaviour
     
     [Header("Sliding & Wall Sliding Variables")]
     [SerializeField] private float _slideSpeed = 10f;
-    [SerializeField] private bool _slideClicked;
     [SerializeField] private bool _isWallSliding;
     [SerializeField] private float _wallSlidingDrag;
     [SerializeField] private bool _canSlide => Input.GetButton("Slide") && _onGround;
@@ -36,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float _fallMultiplier = 8f; 
     [SerializeField] private float _lowJumpFallMultiplier = 5f;
     [SerializeField] private int _extraJumps = 1;
-    private int _extraJumpsValue;
+    [SerializeField] private int _extraJumpsValue;
 
     [Header("Ground Collision Variables")]
     [SerializeField] private float _groundRaycastLength;
@@ -50,9 +49,8 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         _isWallSliding = false;
-        _slideClicked = false;
         _maxMoveSpeedInit = _maxMoveSpeed;
-        _slideSpeed += _maxMoveSpeed;
+      //  _slideSpeed += _maxMoveSpeed;
         _rb= GetComponent<Rigidbody2D>();
     }
 
@@ -127,19 +125,12 @@ public class PlayerMovement : MonoBehaviour
         if (_canSlide)
         {
             
-            _maxMoveSpeed = _slideSpeed;
+          //  _maxMoveSpeed = _slideSpeed;
             _rb.AddForce(new Vector2(_horizontalDirection, 0f) * (_slideSpeed / 2));
             _slideCollider.enabled = true;
             _walkCollider.enabled = false;
-            GetComponent<SpriteRenderer>().color = Color.white;
-            if(!_slideClicked)
-            {
-                transform.position = new Vector3(transform.position.x, transform.position.y - 0.5f, transform.position.z);
-                _slideClicked = true;
-            }
             
-            transform.localScale = new Vector3(1f, 1f, 1f);
-            
+             
         }
         else
         {
@@ -149,12 +140,9 @@ public class PlayerMovement : MonoBehaviour
             bool _right_check = Physics2D.Raycast(right_check_spot, Vector2.up, _groundRaycastLength, _groundLayer);
             if (!(_left_check || _right_check) && _onGround)
             {
-                _maxMoveSpeed = _maxMoveSpeedInit;
+              //  _maxMoveSpeed = _maxMoveSpeedInit;
                 _slideCollider.enabled = false;
                 _walkCollider.enabled = true;
-                GetComponent<SpriteRenderer>().color = Color.green;
-                transform.localScale = new Vector3(1f, 2f, 1f);
-                _slideClicked = false;
             }
             
         }
@@ -221,11 +209,13 @@ public class PlayerMovement : MonoBehaviour
         if(!_onGround && _rb.velocity.y < 0 && (_left_check_up || _right_check_up || _left_check_down || _right_check_down))
         {
             _isWallSliding = true;
+            
         }
         else
         {
             _isWallSliding = false;
         }
+        
     }
 
     private void ApplyDrag()
