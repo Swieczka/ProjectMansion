@@ -22,11 +22,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float _horizontalDirection;
     private bool _changingDirection => (_rb.velocity.x > 0 && _horizontalDirection < 0f) || (_rb.velocity.x < 0 && _horizontalDirection > 0f);
     
-    [Header("Sliding & Wall Sliding Variables")]
-    [SerializeField] private float _slideSpeed = 10f;
+    [Header("Crouching & Wall Sliding Variables")]
+    [SerializeField] private float _crouchSpeed = 6f;
     [SerializeField] private bool _isWallSliding;
     [SerializeField] private float _wallSlidingDrag;
-    [SerializeField] private bool _canSlide => Input.GetButton("Slide") && _onGround;
+    [SerializeField] private bool _canCrouch => Input.GetButton("Crouch") && _onGround;
 
     [Header("Jump Variables")]
     [SerializeField] private float _jumpForce = 12f;
@@ -40,7 +40,12 @@ public class PlayerMovement : MonoBehaviour
     [Header("Ground Collision Variables")]
     [SerializeField] private float _groundRaycastLength;
     [SerializeField] private bool _onGround;
-    
+
+    [Header("Dash Variables")]
+    [SerializeField] float _dashDistance = 15f;
+    bool _isDashing;
+    float doubleTapTime;
+
 
     [Header("Colliders")]
     [SerializeField] Collider2D _walkCollider;
@@ -50,7 +55,6 @@ public class PlayerMovement : MonoBehaviour
     {
         _isWallSliding = false;
         _maxMoveSpeedInit = _maxMoveSpeed;
-      //  _slideSpeed += _maxMoveSpeed;
         _rb= GetComponent<Rigidbody2D>();
     }
 
@@ -61,8 +65,9 @@ public class PlayerMovement : MonoBehaviour
         {
             Jump();
         }
-        Slide();
+        Crouch();
         WallSlide();
+        SwitchDirection();
         _movementSpeedx = _rb.velocity.x;
         _movementSpeedy = _rb.velocity.y;
         if(Input.GetKeyDown(KeyCode.R))
@@ -120,17 +125,13 @@ public class PlayerMovement : MonoBehaviour
         _rb.velocity = new Vector2(_rb.velocity.x, 0f);
         _rb.AddForce(Vector2.up*_jumpForce,ForceMode2D.Impulse);
     }
-    private void Slide()
+    private void Crouch()
     {
-        if (_canSlide)
+        if (_canCrouch)
         {
-            
-          //  _maxMoveSpeed = _slideSpeed;
-            _rb.AddForce(new Vector2(_horizontalDirection, 0f) * (_slideSpeed / 2));
+            _maxMoveSpeed = _crouchSpeed;
             _slideCollider.enabled = true;
-            _walkCollider.enabled = false;
-            
-             
+            _walkCollider.enabled = false;  
         }
         else
         {
@@ -140,7 +141,7 @@ public class PlayerMovement : MonoBehaviour
             bool _right_check = Physics2D.Raycast(right_check_spot, Vector2.up, _groundRaycastLength, _groundLayer);
             if (!(_left_check || _right_check) && _onGround)
             {
-              //  _maxMoveSpeed = _maxMoveSpeedInit;
+                _maxMoveSpeed = _maxMoveSpeedInit;
                 _slideCollider.enabled = false;
                 _walkCollider.enabled = true;
             }
@@ -241,6 +242,18 @@ public class PlayerMovement : MonoBehaviour
         if(collision.collider.gameObject.tag == "Spikes")
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+    }
+
+    private void SwitchDirection()
+    {
+        if(_horizontalDirection > 0)
+        {
+            transform.localScale = new Vector3(2f,2f,2f);
+        }
+        else if(_horizontalDirection < 0)
+        {
+            transform.localScale = new Vector3(-2f, 2f, 2f);
         }
     }
 }
