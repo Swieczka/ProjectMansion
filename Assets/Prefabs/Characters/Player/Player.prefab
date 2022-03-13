@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3349123621136057345}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -182,7 +182,7 @@ MonoBehaviour:
   _maxMoveSpeedInit: 0
   _groundLinearDrag: 10
   _horizontalDirection: 0
-  _slideSpeed: 8
+  _crouchSpeed: 6
   _isWallSliding: 0
   _wallSlidingDrag: 8
   _jumpForce: 24
@@ -190,7 +190,9 @@ MonoBehaviour:
   _fallMultiplier: 6
   _lowJumpFallMultiplier: 5
   _extraJumps: 1
+  _extraJumpsValue: 0
   _groundRaycastLength: 0.8
   _onGround: 0
+  _dashDistance: 15
   _walkCollider: {fileID: 3349123621136057346}
   _slideCollider: {fileID: 3349123621136057347}

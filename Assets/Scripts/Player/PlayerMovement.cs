@@ -51,6 +51,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Collider2D _walkCollider;
     [SerializeField] Collider2D _slideCollider;
 
+    GameManager gameManager;
+    private void Awake()
+    {
+        gameManager = GameObject.FindObjectOfType<GameManager>();
+    }
+
     void Start()
     {
         _isWallSliding = false;
@@ -72,7 +78,7 @@ public class PlayerMovement : MonoBehaviour
         _movementSpeedy = _rb.velocity.y;
         if(Input.GetKeyDown(KeyCode.R))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            gameManager.RestartLevel();
         }
     }
 
@@ -241,7 +247,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if(collision.collider.gameObject.tag == "Spikes")
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            gameManager.RestartLevel();
         }
     }
 

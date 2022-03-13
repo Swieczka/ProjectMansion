@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class Checkpoint : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    GameManager gameManager;
+    [SerializeField] private float _cam_x;
+    [SerializeField] private float _cam_y;
+    [SerializeField] private Vector3 _player_pos;
+    private void Awake()
     {
-        
+        gameManager = GameObject.FindObjectOfType<GameManager>();
     }
-
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        gameManager.ChangeCameraPos(_cam_x, _cam_y);
+        gameManager.ChangePlayerRespawn(_player_pos);
     }
 }
