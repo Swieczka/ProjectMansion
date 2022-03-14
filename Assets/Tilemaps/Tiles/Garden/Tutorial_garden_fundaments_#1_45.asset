@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: Tutorial_garden_fundaments_#1_45
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: -4292113269001928131, guid: 5c5b1928b85aca94f8539cff4b60ae80, type: 3}
+  m_Sprite: {fileID: -4292113269001928131, guid: 7af8c84c355144d46b67aa93369ad593, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
