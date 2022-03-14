@@ -27,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private bool _isWallSliding;
     [SerializeField] private float _wallSlidingDrag;
     [SerializeField] private bool _canCrouch => Input.GetButton("Crouch") && _onGround;
+    public bool _Head;
 
     [Header("Jump Variables")]
     [SerializeField] private float _jumpForce = 12f;
@@ -141,15 +142,22 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            Vector3 left_check_spot = new Vector3(transform.position.x - 0.5f, transform.position.y - 0.1f, transform.position.z);
-            Vector3 right_check_spot = new Vector3(transform.position.x + 0.5f, transform.position.y - 0.1f, transform.position.z);
-            bool _left_check = Physics2D.Raycast(left_check_spot, Vector2.up, _groundRaycastLength, _groundLayer);
-            bool _right_check = Physics2D.Raycast(right_check_spot, Vector2.up, _groundRaycastLength, _groundLayer);
-            if (!(_left_check || _right_check) && _onGround)
+            Vector3 left_check_spot = new Vector3(transform.position.x - 0.3f, transform.position.y -0.1f, transform.position.z);
+            Vector3 right_check_spot = new Vector3(transform.position.x + 0.3f, transform.position.y -0.1f, transform.position.z);
+            Vector3 up_crouch_check = new Vector3(transform.position.x - 0.4f, transform.position.y + 1f, transform.position.z);
+            bool _left_check = Physics2D.Raycast(left_check_spot, Vector2.up, _groundRaycastLength*1.3f, _groundLayer);
+            bool _right_check = Physics2D.Raycast(right_check_spot, Vector2.up, _groundRaycastLength*1.3f, _groundLayer);
+            bool _up_check = Physics2D.Raycast(up_crouch_check, Vector2.right, _groundRaycastLength, _groundLayer);
+            if(_up_check)
+            {
+                _Head = true;
+            }
+            if (!(_left_check || _right_check || _up_check))
             {
                 _maxMoveSpeed = _maxMoveSpeedInit;
                 _slideCollider.enabled = false;
                 _walkCollider.enabled = true;
+                _Head = false;
             }
             
         }
@@ -162,29 +170,31 @@ public class PlayerMovement : MonoBehaviour
         bool _left_check = Physics2D.Raycast(left_check_spot, Vector2.down, _groundRaycastLength, _groundLayer);
         bool _right_check = Physics2D.Raycast(right_check_spot, Vector2.down, _groundRaycastLength, _groundLayer);
         _onGround = _left_check || _right_check;
-       // _onGround = Physics2D.Raycast(transform.position, Vector2.down, _groundRaycastLength, _groundLayer);
     }
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
-        Vector3 left_check = new Vector3(transform.position.x - 0.5f, transform.position.y-0.5f, transform.position.z);
-        Vector3 right_check = new Vector3(transform.position.x+0.5f, transform.position.y-0.5f, transform.position.z);
+        Vector3 left_check = new Vector3(transform.position.x - 0.3f, transform.position.y-0.5f, transform.position.z);
+        Vector3 right_check = new Vector3(transform.position.x+0.3f, transform.position.y-0.5f, transform.position.z);
         Gizmos.DrawLine(right_check, right_check + Vector3.down * _groundRaycastLength);
         Gizmos.DrawLine(left_check, left_check + Vector3.down * _groundRaycastLength);
         Gizmos.color = Color.red;
-        Vector3 left_slide_check = new Vector3(transform.position.x - 0.5f, transform.position.y - 0.1f, transform.position.z);
-        Vector3 right_slide_check = new Vector3(transform.position.x + 0.5f, transform.position.y - 0.1f, transform.position.z);
-        Gizmos.DrawLine(left_slide_check, left_slide_check + Vector3.up * _groundRaycastLength);
-        Gizmos.DrawLine(right_slide_check, right_slide_check + Vector3.up * _groundRaycastLength);
-        Gizmos.color = Color.magenta;
+        Vector3 left_slide_check = new Vector3(transform.position.x - 0.3f, transform.position.y -0.1f , transform.position.z);
+        Vector3 right_slide_check = new Vector3(transform.position.x + 0.3f, transform.position.y -0.1f, transform.position.z);
+        Gizmos.DrawLine(left_slide_check, left_slide_check + Vector3.up * _groundRaycastLength*1.3f);
+        Gizmos.DrawLine(right_slide_check, right_slide_check + Vector3.up * _groundRaycastLength*1.3f);
+        Vector3 up_crouch_check = new Vector3(transform.position.x - 0.4f, transform.position.y+1f, transform.position.z);
+        Gizmos.DrawLine(up_crouch_check, up_crouch_check + Vector3.right * _groundRaycastLength);
         Vector3 left_wallslide_check = new Vector3(transform.position.x, transform.position.y, transform.position.z);
         Vector3 right_wallslide_check = new Vector3(transform.position.x, transform.position.y, transform.position.z);
         Vector3 left_wallslide_checkdown = new Vector3(transform.position.x, transform.position.y - 0.4f, transform.position.z);
         Vector3 right_wallslide_checkdown = new Vector3(transform.position.x, transform.position.y - 0.4f, transform.position.z);
-        Gizmos.DrawLine(left_wallslide_checkdown, left_wallslide_checkdown + Vector3.left * (_groundRaycastLength/1.5f));
-        Gizmos.DrawLine(right_wallslide_checkdown, right_wallslide_checkdown + Vector3.right * (_groundRaycastLength / 1.5f));
-        Gizmos.DrawLine(left_wallslide_check, left_wallslide_check + Vector3.left * (_groundRaycastLength / 1.5f));
+        Gizmos.color = Color.magenta;
+        Gizmos.DrawLine(left_wallslide_check, left_wallslide_check + Vector3.left * (_groundRaycastLength/1.5f));
         Gizmos.DrawLine(right_wallslide_check, right_wallslide_check + Vector3.right * (_groundRaycastLength / 1.5f));
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawLine(left_wallslide_checkdown, left_wallslide_checkdown + Vector3.left * (_groundRaycastLength / 1.5f));
+        Gizmos.DrawLine(right_wallslide_checkdown, right_wallslide_checkdown + Vector3.right * (_groundRaycastLength / 1.5f));
     }
 
     private void FallMultiplier()
