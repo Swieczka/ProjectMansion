@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 2f0163eba3c5df94c85f5f5ea40d26e5
+guid: f1e9ae7b69466c548b0975be60339e66
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8763902347423706010
-    second: Tutorial_garden_fundaments_#3_0
+      213: -5711848221618334454
+    second: Knight_0
   - first:
-      213: -3849186333183016313
-    second: Tutorial_garden_fundaments_#3_1
+      213: -8985680732576350864
+    second: Knight_1
   - first:
-      213: 6569263866748872333
-    second: Tutorial_garden_fundaments_#3_2
+      213: 7827260208125532704
+    second: Knight_2
   - first:
-      213: 3238934518640801143
-    second: Tutorial_garden_fundaments_#3_3
+      213: 5457420103614929235
+    second: Knight_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -58,7 +58,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -103,102 +103,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tutorial_garden_fundaments_#3_0
+      name: Knight_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 16
-        width: 16
-        height: 16
+        y: 320
+        width: 320
+        height: 320
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -8, y: -8}
-        - {x: 8, y: -8}
-        - {x: 8, y: 0}
-        - {x: -8, y: 0}
+      physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a9be66870c2af9970800000000000000
-      internalID: 8763902347423706010
+      spriteID: a051e7b1e407bb0b0800000000000000
+      internalID: -5711848221618334454
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tutorial_garden_fundaments_#3_1
+      name: Knight_1
       rect:
         serializedVersion: 2
-        x: 16
-        y: 16
-        width: 16
-        height: 16
+        x: 320
+        y: 320
+        width: 320
+        height: 320
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -8, y: 8}
-        - {x: -8, y: -4}
-        - {x: -4, y: 0}
-        - {x: 8, y: 0}
-        - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78286508c61f49ac0800000000000000
-      internalID: -3849186333183016313
+      spriteID: 07df6bd5bf27c4380800000000000000
+      internalID: -8985680732576350864
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tutorial_garden_fundaments_#3_2
+      name: Knight_2
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 16
+        width: 320
+        height: 320
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -8, y: 8}
-        - {x: -8, y: -8}
-        - {x: 8, y: -8}
-        - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d86206d6ea6ba2b50800000000000000
-      internalID: 6569263866748872333
+      spriteID: 02a5fdd40b300ac60800000000000000
+      internalID: 7827260208125532704
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tutorial_garden_fundaments_#3_3
+      name: Knight_3
       rect:
         serializedVersion: 2
-        x: 16
+        x: 320
         y: 0
-        width: 16
-        height: 16
+        width: 320
+        height: 320
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -8, y: 8}
-        - {x: -8, y: -8}
-        - {x: 8, y: -8}
-        - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 775f55ab8c103fc20800000000000000
-      internalID: 3238934518640801143
+      spriteID: 3591b0a6ba6acbb40800000000000000
+      internalID: 5457420103614929235
       vertices: []
       indices: 
       edges: []
