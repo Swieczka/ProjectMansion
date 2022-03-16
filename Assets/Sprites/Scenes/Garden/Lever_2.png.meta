@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: e83c9f68cb4102c4e80bc5393f39bbe9
+guid: 62067a2265742c444b6a9c52f6916f97
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4454914845596493489
-    second: Lever_0
+      213: -3769759845917220838
+    second: Lever_2_0
   - first:
-      213: 1694985531360637023
-    second: Lever_1
+      213: 7454430170701327748
+    second: Lever_2_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Lever_0
+      name: Lever_2_0
       rect:
         serializedVersion: 2
         x: 0
@@ -111,14 +111,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f495b931d86fc22c0800000000000000
-      internalID: -4454914845596493489
+      spriteID: a10a297a46f1fabc0800000000000000
+      internalID: -3769759845917220838
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lever_1
+      name: Lever_2_1
       rect:
         serializedVersion: 2
         x: 0
@@ -132,8 +132,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f507d204c5cc58710800000000000000
-      internalID: 1694985531360637023
+      spriteID: 48d6b97beb4737760800000000000000
+      internalID: 7454430170701327748
       vertices: []
       indices: 
       edges: []
