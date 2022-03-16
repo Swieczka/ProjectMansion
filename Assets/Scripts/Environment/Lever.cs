@@ -6,9 +6,11 @@ public class Lever : Interactable
 {
     [SerializeField] Sprite[] LeverSprites;
     [SerializeField] bool _isLeverActive;
-    protected override void Action()
+    [SerializeField] GameObject _gameObjecttoInteract;
+    public override void Action()
     {
         _isLeverActive = !_isLeverActive;
+        _gameObjecttoInteract.GetComponent<Interactable>().Action();
         if(_isLeverActive)
         {
             GetComponent<SpriteRenderer>().sprite = LeverSprites[0];

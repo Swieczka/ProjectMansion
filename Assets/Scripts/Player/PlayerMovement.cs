@@ -350,7 +350,6 @@ public class PlayerMovement : MonoBehaviour
             {
                 animator.SetBool("isFalling", true);
             }
-            
         }
         if (_onGround)
         {

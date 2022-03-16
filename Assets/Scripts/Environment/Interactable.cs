@@ -27,7 +27,7 @@ public class Interactable : MonoBehaviour
             is_player_nearby = false;
         }
     }
-    protected virtual void Action()
+    public virtual void Action()
     {
 
     }

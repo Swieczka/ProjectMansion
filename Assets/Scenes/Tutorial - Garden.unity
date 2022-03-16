@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 3692244}
   - component: {fileID: 3692243}
   - component: {fileID: 3692242}
+  - component: {fileID: 3692245}
   m_Layer: 0
   m_Name: Hanging_gate
   m_TagString: Untagged
@@ -253,6 +254,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3692245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3692240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0e31151190a7314fa0d9add3c09f46a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  is_player_nearby: 0
+  animator: {fileID: 3692242}
+  isActivated: 0
+  _animationName: Open
 --- !u!1001 &50325538
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30845,9 +30862,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   is_player_nearby: 0
   LeverSprites:
-  - {fileID: -3769759845917220838, guid: 62067a2265742c444b6a9c52f6916f97, type: 3}
   - {fileID: 7454430170701327748, guid: 62067a2265742c444b6a9c52f6916f97, type: 3}
+  - {fileID: -3769759845917220838, guid: 62067a2265742c444b6a9c52f6916f97, type: 3}
   _isLeverActive: 0
+  _gameObjecttoInteract: {fileID: 3692240}
 --- !u!61 &1054856829
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -41755,12 +41773,20 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3349123621136057346, guid: c92974e50bb57304aac6e8307b652944, type: 3}
+      propertyPath: m_Size.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3349123621136057346, guid: c92974e50bb57304aac6e8307b652944, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3349123621136057346, guid: c92974e50bb57304aac6e8307b652944, type: 3}
       propertyPath: m_Offset.y
       value: -0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3349123621136057347, guid: c92974e50bb57304aac6e8307b652944, type: 3}
+      propertyPath: m_Size.x
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 3349123621136057347, guid: c92974e50bb57304aac6e8307b652944, type: 3}
       propertyPath: m_Size.y

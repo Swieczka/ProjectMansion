@@ -24,7 +24,7 @@ public class Plate : Interactable
             is_player_nearby = false;
         }
     }
-    protected override void Action()
+    public override void Action()
     {
         if (!PlateContent.activeSelf)
         {

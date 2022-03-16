@@ -19,7 +19,7 @@ public class Tutorial_Knight : Puzzle
         _state++;
         PuzzleCheck();
     }
-    protected override void Action()
+    public override void Action()
     {
         ChangeKnightState();
         _Manager.Check();
