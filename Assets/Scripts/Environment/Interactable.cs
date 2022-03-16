@@ -2,13 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Plate : Interactable
+public class Interactable : MonoBehaviour
 {
-    [SerializeField] GameObject PlateContent;
-    void Start()
+    [SerializeField] protected bool is_player_nearby;
+
+    void Update()
     {
-        is_player_nearby = false;
-        PlateContent.SetActive(false);
+        if (is_player_nearby && Input.GetKeyDown(KeyCode.E))
+        {
+            Action();
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -24,15 +27,8 @@ public class Plate : Interactable
             is_player_nearby = false;
         }
     }
-    protected override void Action()
+    protected virtual void Action()
     {
-        if (!PlateContent.activeSelf)
-        {
-            PlateContent.SetActive(true);
-        }
-        else
-        {
-            PlateContent.SetActive(false);
-        }
+
     }
 }
