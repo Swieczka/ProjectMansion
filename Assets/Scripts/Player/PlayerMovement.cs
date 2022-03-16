@@ -20,6 +20,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float _maxMoveSpeedInit;
     [SerializeField] private float _groundLinearDrag;
     [SerializeField] private float _horizontalDirection;
+    [SerializeField] private float _verticalDirection;
+    [SerializeField] private bool _facingRight = true;
     private bool _changingDirection => (_rb.velocity.x > 0 && _horizontalDirection < 0f) || (_rb.velocity.x < 0 && _horizontalDirection > 0f);
     
     [Header("Crouching & Wall Sliding Variables")]
@@ -43,9 +45,13 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private bool _onGround;
 
     [Header("Dash Variables")]
-    [SerializeField] float _dashDistance = 15f;
-    bool _isDashing;
-    float doubleTapTime;
+    [SerializeField] float _dashSpeed = 15f;
+    [SerializeField] float _dashLength = 0.3f;
+    [SerializeField] float _dashBufferLength = 0.1f;
+    [SerializeField] private float _dashBufferCounter;
+    [SerializeField] bool _isDashing;
+    [SerializeField] bool _hasDashed;
+    bool _canDash =>  _dashBufferCounter > 0f && !_hasDashed;
 
 
     [Header("Colliders")]
@@ -68,13 +74,25 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         _horizontalDirection = GetInput().x;
+        _verticalDirection = GetInput().y;
         if (_canJump)
         {
             Jump();
         }
+        if(Input.GetButtonDown("Dash"))
+        {
+            _dashBufferCounter = _dashBufferLength;
+        } 
+        else
+        {
+            _dashBufferCounter -= Time.deltaTime;
+        }
         Crouch();
         WallSlide();
-        SwitchDirection();
+        if ((_horizontalDirection < 0f && _facingRight || _horizontalDirection > 0f && !_facingRight))
+        {
+            SwitchDirection();
+        }
         _movementSpeedx = _rb.velocity.x;
         _movementSpeedy = _rb.velocity.y;
         if(Input.GetKeyDown(KeyCode.R))
@@ -83,16 +101,22 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-
     private void FixedUpdate()
     {
         CheckCollisions();
-        MovePlayer();
-        if (_onGround)
+        if(_canDash)
         {
-            _extraJumpsValue = _extraJumps;
+            StartCoroutine(Dash(_horizontalDirection));
         }
-        ApplyDrag();
+        if(!_isDashing)
+        {
+            MovePlayer();
+            if (_onGround)
+            {
+                _extraJumpsValue = _extraJumps;
+            }
+            ApplyDrag();
+        }
 
     }
     private static Vector2 GetInput()
@@ -163,6 +187,35 @@ public class PlayerMovement : MonoBehaviour
         }
         
     }
+    IEnumerator Dash(float x)
+    {
+        float dashStartTime = Time.time;
+        _hasDashed = true;
+        _isDashing = true;
+
+        _rb.velocity = Vector2.zero;
+        _rb.gravityScale = 0f;
+        _rb.drag = 0f;
+
+        Vector2 dir;
+        if(x!=0f)
+        {
+            dir = new Vector2(x, 0f);
+        }
+        else
+        {
+            if(_facingRight) dir = new Vector2(1f, 0f);
+            else dir = new Vector2(-1f, 0f);
+        }
+        while(Time.time < dashStartTime + _dashLength)
+        {
+            _rb.velocity = dir.normalized * _dashSpeed;
+            yield return null;
+        }
+        _isDashing = false;
+        yield return new WaitForSeconds(3f);
+        _hasDashed = false;
+    }
     private void CheckCollisions()
     {
         Vector3 left_check_spot = new Vector3(transform.position.x - 0.5f, transform.position.y-0.5f, transform.position.z);
@@ -226,7 +279,6 @@ public class PlayerMovement : MonoBehaviour
         if(!_onGround && _rb.velocity.y < 0 && (_left_check_up || _right_check_up || _left_check_down || _right_check_down))
         {
             _isWallSliding = true;
-            
         }
         else
         {
@@ -263,13 +315,15 @@ public class PlayerMovement : MonoBehaviour
 
     private void SwitchDirection()
     {
-        if(_horizontalDirection > 0)
+        _facingRight = !_facingRight;
+        transform.Rotate(0f, 180f, 0f);
+      /*  if (_horizontalDirection > 0)
         {
             transform.localScale = new Vector3(2f,2f,2f);
         }
         else if(_horizontalDirection < 0)
         {
             transform.localScale = new Vector3(-2f, 2f, 2f);
-        }
+        }*/
     }
 }
