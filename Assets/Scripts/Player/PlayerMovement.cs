@@ -59,9 +59,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Collider2D _slideCollider;
 
     GameManager gameManager;
+    Animator animator;
     private void Awake()
     {
         gameManager = GameObject.FindObjectOfType<GameManager>();
+        animator = gameObject.GetComponent<Animator>();
     }
 
     void Start()
@@ -99,6 +101,7 @@ public class PlayerMovement : MonoBehaviour
         {
             gameManager.RestartLevel();
         }
+        Animation();
     }
 
     private void FixedUpdate()
@@ -155,6 +158,7 @@ public class PlayerMovement : MonoBehaviour
         }
         _rb.velocity = new Vector2(_rb.velocity.x, 0f);
         _rb.AddForce(Vector2.up*_jumpForce,ForceMode2D.Impulse);
+        animator.Play("Base Layer.Jump Start");
     }
     private void Crouch()
     {
@@ -325,5 +329,45 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.localScale = new Vector3(-2f, 2f, 2f);
         }*/
+    }
+
+    private void Animation()
+    {
+        if(_canJump)
+        {
+            animator.SetBool("isFalling", false);
+            animator.SetBool("isJumping", true);
+            animator.Play("Base Layer.Jump Start"); 
+        }
+        else
+        {
+            animator.SetBool("isJumping", false);
+            if (_rb.velocity.y >=0)
+            {
+                animator.SetBool("isFalling", false);
+            }
+            if (_rb.velocity.y < 0)
+            {
+                animator.SetBool("isFalling", true);
+            }
+            
+        }
+        if (_onGround)
+        {
+            animator.SetBool("isLanding", true);
+            animator.SetBool("isFalling", false);
+            if (_horizontalDirection!=0)
+            {
+                animator.SetBool("isRunning", true);
+            }
+            else
+            {
+                animator.SetBool("isRunning", false);
+            }
+        }
+        else
+        {
+            animator.SetBool("isLanding", false);
+        }
     }
 }
