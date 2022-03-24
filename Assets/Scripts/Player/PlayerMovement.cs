@@ -88,8 +88,9 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             _dashBufferCounter -= Time.deltaTime;
+            
         }
-        Crouch();
+        
         WallSlide();
         if ((_horizontalDirection < 0f && _facingRight || _horizontalDirection > 0f && !_facingRight))
         {
@@ -106,6 +107,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        
         CheckCollisions();
         if(_canDash)
         {
@@ -113,7 +115,9 @@ public class PlayerMovement : MonoBehaviour
         }
         if(!_isDashing)
         {
+            
             MovePlayer();
+            Crouch();
             if (_onGround)
             {
                 _extraJumpsValue = _extraJumps;
@@ -200,7 +204,11 @@ public class PlayerMovement : MonoBehaviour
         _rb.velocity = Vector2.zero;
         _rb.gravityScale = 0f;
         _rb.drag = 0f;
-
+        if(_onGround)
+        {
+            _slideCollider.enabled = true;
+            _walkCollider.enabled = false;
+        }
         Vector2 dir;
         if(x!=0f)
         {
@@ -217,7 +225,7 @@ public class PlayerMovement : MonoBehaviour
             yield return null;
         }
         _isDashing = false;
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
         _hasDashed = false;
     }
     private void CheckCollisions()
