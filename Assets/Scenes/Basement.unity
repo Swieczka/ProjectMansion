@@ -705,7 +705,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 729269885}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.994938, y: 2.1469066, z: -916.01355}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -938,7 +938,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1045380347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -951,12 +951,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5021a89eb9fe24a4988fde0a2598875e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CurrentBiom: 0
   _camera_x: 0
   _camera_y: 0
-  _player_x: 0
-  _player_y: 0
   _player_respawn_position: {x: 0, y: 0, z: 0}
-  deathcount: 0
+  StoryCollectibles: 
 --- !u!4 &1045380348
 Transform:
   m_ObjectHideFlags: 0
@@ -5946,8 +5945,20 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3349123621136057345, guid: c92974e50bb57304aac6e8307b652944, type: 3}
+      propertyPath: xasd.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3349123621136057345, guid: c92974e50bb57304aac6e8307b652944, type: 3}
       propertyPath: _maxMoveSpeedInit
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3349123621136057345, guid: c92974e50bb57304aac6e8307b652944, type: 3}
+      propertyPath: xasd.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3349123621136057345, guid: c92974e50bb57304aac6e8307b652944, type: 3}
+      propertyPath: xasd.Array.data[1]
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3349123621136057346, guid: c92974e50bb57304aac6e8307b652944, type: 3}
       propertyPath: m_Size.x
@@ -5991,11 +6002,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3349123621136057356, guid: c92974e50bb57304aac6e8307b652944, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 48.4
+      value: -35.37
       objectReference: {fileID: 0}
     - target: {fileID: 3349123621136057356, guid: c92974e50bb57304aac6e8307b652944, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 13.27
+      value: 5.17
       objectReference: {fileID: 0}
     - target: {fileID: 3349123621136057357, guid: c92974e50bb57304aac6e8307b652944, type: 3}
       propertyPath: m_Sprite

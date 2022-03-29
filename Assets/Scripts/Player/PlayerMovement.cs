@@ -98,10 +98,6 @@ public class PlayerMovement : MonoBehaviour
         }
         _movementSpeedx = _rb.velocity.x;
         _movementSpeedy = _rb.velocity.y;
-        if(Input.GetKeyDown(KeyCode.R))
-        {
-            gameManager.RestartLevel();
-        }
         Animation();
     }
 
@@ -133,7 +129,15 @@ public class PlayerMovement : MonoBehaviour
     private void MovePlayer()
     {
         _rb.AddForce(new Vector2(_horizontalDirection, 0f)*_movementAcceleration);
-        if(Mathf.Abs(_rb.velocity.x) > _maxMoveSpeed)
+        if(_rb.velocity.x < 0.1f && _rb.velocity.x > -0.1f)
+        {
+            _rb.velocity = new Vector2(0,_rb.velocity.y);
+        }
+        if (_rb.velocity.y < 0.1f && _rb.velocity.y > -0.1f)
+        {
+            _rb.velocity = new Vector2(_rb.velocity.x, 0);
+        }
+        if (Mathf.Abs(_rb.velocity.x) > _maxMoveSpeed)
         {
             _rb.velocity=new Vector2(Mathf.Sign(_rb.velocity.x)*_maxMoveSpeed,_rb.velocity.y);
         }
@@ -230,8 +234,8 @@ public class PlayerMovement : MonoBehaviour
     }
     private void CheckCollisions()
     {
-        Vector3 left_check_spot = new Vector3(transform.position.x - 0.5f, transform.position.y-0.5f, transform.position.z);
-        Vector3 right_check_spot = new Vector3(transform.position.x + 0.5f, transform.position.y-0.5f, transform.position.z);
+        Vector3 left_check_spot = new Vector3(transform.position.x - 0.3f, transform.position.y-0.5f, transform.position.z);
+        Vector3 right_check_spot = new Vector3(transform.position.x + 0.3f, transform.position.y-0.5f, transform.position.z);
         bool _left_check = Physics2D.Raycast(left_check_spot, Vector2.down, _groundRaycastLength, _groundLayer);
         bool _right_check = Physics2D.Raycast(right_check_spot, Vector2.down, _groundRaycastLength, _groundLayer);
         _onGround = _left_check || _right_check;
@@ -240,7 +244,7 @@ public class PlayerMovement : MonoBehaviour
     {
         Gizmos.color = Color.green;
         Vector3 left_check = new Vector3(transform.position.x - 0.3f, transform.position.y-0.5f, transform.position.z);
-        Vector3 right_check = new Vector3(transform.position.x+0.3f, transform.position.y-0.5f, transform.position.z);
+        Vector3 right_check = new Vector3(transform.position.x + 0.3f, transform.position.y-0.5f, transform.position.z);
         Gizmos.DrawLine(right_check, right_check + Vector3.down * _groundRaycastLength);
         Gizmos.DrawLine(left_check, left_check + Vector3.down * _groundRaycastLength);
         Gizmos.color = Color.red;
@@ -284,10 +288,10 @@ public class PlayerMovement : MonoBehaviour
         Vector3 right_wallslide_check = new Vector3(transform.position.x, transform.position.y, transform.position.z);
         Vector3 left_wallslide_checkdown = new Vector3(transform.position.x, transform.position.y - 0.4f, transform.position.z);
         Vector3 right_wallslide_checkdown = new Vector3(transform.position.x, transform.position.y - 0.4f, transform.position.z);
-        bool _left_check_up = Physics2D.Raycast(left_wallslide_check, Vector2.left, _groundRaycastLength, _groundLayer);
-        bool _right_check_up = Physics2D.Raycast(right_wallslide_check, Vector2.right, _groundRaycastLength, _groundLayer);
-        bool _left_check_down = Physics2D.Raycast(left_wallslide_checkdown, Vector2.left, _groundRaycastLength, _groundLayer);
-        bool _right_check_down = Physics2D.Raycast(right_wallslide_checkdown, Vector2.right, _groundRaycastLength, _groundLayer);
+        bool _left_check_up = Physics2D.Raycast(left_wallslide_check, Vector2.left, _groundRaycastLength/1.5f, _groundLayer);
+        bool _right_check_up = Physics2D.Raycast(right_wallslide_check, Vector2.right, _groundRaycastLength/1.5f, _groundLayer);
+        bool _left_check_down = Physics2D.Raycast(left_wallslide_checkdown, Vector2.left, _groundRaycastLength/1.5f, _groundLayer);
+        bool _right_check_down = Physics2D.Raycast(right_wallslide_checkdown, Vector2.right, _groundRaycastLength/1.5f, _groundLayer);
         if(!_onGround && _rb.velocity.y < 0 && (_left_check_up || _right_check_up || _left_check_down || _right_check_down))
         {
             _isWallSliding = true;
@@ -305,23 +309,23 @@ public class PlayerMovement : MonoBehaviour
          {
              _rb.drag = _wallSlidingDrag;
          }
-         else
-        if (_onGround)
+        else if (_onGround)
         {
             ApplyGroundLinearDrag();
         }
         else
         {
             ApplyAirLinearDrag();
-            FallMultiplier();
+            
         }
+        FallMultiplier();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.collider.gameObject.tag == "Spikes")
         {
-            gameManager.RestartLevel();
+            gameManager.LoadGame();
         }
     }
 

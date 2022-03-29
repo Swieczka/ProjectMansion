@@ -6,15 +6,14 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    public int CurrentBiom;
     public float _camera_x;
     public float _camera_y;
-    public float _player_x;
-    public float _player_y;
     public Vector3 _player_respawn_position;
-    public int deathcount;
+
+    public List<bool> StoryCollectibles = new List<bool>();
     private void Awake()
     {
-        deathcount = 0;
         
         if(instance != null)
         {
@@ -25,22 +24,28 @@ public class GameManager : MonoBehaviour
             instance = this; 
         }
         DontDestroyOnLoad(gameObject);
-        StartSetup();
-    }
-    void Start()
-    {
-        if (deathcount == 0)
+        LoadInMenu();
+        Scene X = SceneManager.GetActiveScene();
+        if (X.buildIndex !=0)
         {
-            PlayerPrefs.SetFloat("PlayerX", -14f);
-            PlayerPrefs.SetFloat("PlayerY", 5f);
-            ChangeCameraPos(0, 0);
+            LoadGame();
         }
         
     }
-
-    void Update()
+    void Start()
     {
         
+    }
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.F5))
+        {
+            SaveGame();
+        }
+        if (Input.GetKeyDown(KeyCode.F9))
+        {
+            LoadGame();
+        }
     }
 
     public void DebugText(string text)
@@ -57,30 +62,68 @@ public class GameManager : MonoBehaviour
     public void ChangePlayerRespawn(Vector3 pos)
     {
         _player_respawn_position = pos;
-        _player_x = pos.x;
-        _player_y = pos.y;
-        PlayerPrefs.SetFloat("PlayerX", _player_x);
-        PlayerPrefs.SetFloat("PlayerY", _player_y);
     }
-
-    public void RestartLevel()
+    public void LoadInMenu()
     {
-        deathcount++;
-        PlayerPrefs.SetFloat("CamX",_camera_x);
-        PlayerPrefs.SetFloat("CamY", _camera_y);
-        PlayerPrefs.SetFloat("PlayerX", _player_x);
-        PlayerPrefs.SetFloat("PlayerY", _player_y);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SaveData data = SaveSystem.LoadGame();
+        CurrentBiom = data.CurrentBiom;
+        Vector3 pos;
+        pos.x = data.playerSpawnPos[0];
+        pos.y = data.playerSpawnPos[1];
+        pos.z = data.playerSpawnPos[2];
+        _player_respawn_position = pos;
+
+        _camera_x = data.camPos[0];
+        _camera_y = data.camPos[1];
+
+        for (int i = 0; i < StoryCollectibles.Count; i++)
+        {
+            StoryCollectibles[i] = data.StoryCollectibles[i];
+        }
     }
-
-    public void StartSetup()
+    public void LoadGame()
     {
-        _camera_x = PlayerPrefs.GetFloat("CamX");
-        _camera_y = PlayerPrefs.GetFloat("CamY");
-        _player_x = PlayerPrefs.GetFloat("PlayerX");
-        _player_y = PlayerPrefs.GetFloat("PlayerY");
-        _player_respawn_position = new Vector3(_player_x, _player_y, 0f);
+        SaveData data = SaveSystem.LoadGame();
+        CurrentBiom = data.CurrentBiom;
+        Vector3 pos;
+        pos.x = data.playerSpawnPos[0];
+        pos.y = data.playerSpawnPos[1];
+        pos.z = data.playerSpawnPos[2];
+        _player_respawn_position = pos;
+
+        _camera_x = data.camPos[0];
+        _camera_y = data.camPos[1];
+
+        for (int i = 0; i < StoryCollectibles.Count; i++)
+        {
+            StoryCollectibles[i] = data.StoryCollectibles[i];
+        }
         ChangeCameraPos(_camera_x, _camera_y);
         GameObject.FindGameObjectWithTag("Player").transform.position = _player_respawn_position;
+    }
+    public void SaveGame()
+    {
+        SaveSystem.SaveGame(this);
+    }
+
+    public void RestartStats()
+    {
+        _camera_x = 0;
+        _camera_y = 0;
+        CurrentBiom = 4;
+        _player_respawn_position = new Vector3(-14, 5, 0);
+        for(int x=0; x < StoryCollectibles.Count; x++)
+        {
+            StoryCollectibles[x] = false;
+        }
+    }
+    public void NextBiom(int biom, float x, float y, Vector3 res)
+    {
+        CurrentBiom = biom;
+        _camera_x = x;
+        _camera_y = y;
+        _player_respawn_position = res;
+        SaveGame();
+        SceneManager.LoadScene(CurrentBiom);
     }
 }

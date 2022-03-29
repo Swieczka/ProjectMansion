@@ -12,9 +12,11 @@ public class Checkpoint : MonoBehaviour
     {
         gameManager = GameObject.FindObjectOfType<GameManager>();
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         gameManager.ChangeCameraPos(_cam_x, _cam_y);
         gameManager.ChangePlayerRespawn(_player_pos);
+        gameManager.SaveGame();
     }
 }
