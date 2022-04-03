@@ -948,7 +948,7 @@ GameObject:
   - component: {fileID: 8094787317450927233}
   - component: {fileID: 7111446918450827197}
   m_Layer: 0
-  m_Name: Garden Background
+  m_Name: Garden_Background_Palette
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

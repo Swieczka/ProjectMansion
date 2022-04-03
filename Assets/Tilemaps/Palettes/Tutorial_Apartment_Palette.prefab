@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5408476454028968464}
   - component: {fileID: 8775435216737425817}
   m_Layer: 0
-  m_Name: Tutorial_apartment
+  m_Name: Tutorial_Apartment_Palette
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
