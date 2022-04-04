@@ -7,7 +7,8 @@ public class Puzzle : Interactable
     [SerializeField] protected int _state;
     [SerializeField] protected int _correct_state;
     [SerializeField] public bool _has_correct_state;
-    
+    [SerializeField] public Puzzle_Manager _Manager;
+
     protected virtual void PuzzleCheck()
     {
 

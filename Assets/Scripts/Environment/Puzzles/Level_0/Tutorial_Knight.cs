@@ -5,7 +5,7 @@ using UnityEngine;
 public class Tutorial_Knight : Puzzle
 {
     [SerializeField] private Sprite[] KnightSprites = new Sprite[4];
-    [SerializeField] private Tutorial_Knight_Manager _Manager;
+   // [SerializeField] private Tutorial_Knight_Manager _Manager;
     private SpriteRenderer spriteRenderer;
     void Start()
     {
