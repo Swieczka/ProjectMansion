@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Interactable : MonoBehaviour
+public class Interactable : LevelObject
 {
     [SerializeField] protected bool is_player_nearby;
 
@@ -26,9 +26,5 @@ public class Interactable : MonoBehaviour
         {
             is_player_nearby = false;
         }
-    }
-    public virtual void Action()
-    {
-
     }
 }

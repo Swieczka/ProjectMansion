@@ -83,6 +83,7 @@ public class GameManager : MonoBehaviour
     }
     public void LoadGame()
     {
+        ResetObjects();
         SaveData data = SaveSystem.LoadGame();
         CurrentBiom = data.CurrentBiom;
         Vector3 pos;
@@ -125,5 +126,14 @@ public class GameManager : MonoBehaviour
         _player_respawn_position = res;
         SaveGame();
         SceneManager.LoadScene(CurrentBiom);
+    }
+
+    public void ResetObjects()
+    {
+        LevelObject[] levelObjects = Resources.FindObjectsOfTypeAll<LevelObject>();
+        foreach(LevelObject levelObject in levelObjects)
+        {
+            levelObject.ObjectReset();
+        }
     }
 }

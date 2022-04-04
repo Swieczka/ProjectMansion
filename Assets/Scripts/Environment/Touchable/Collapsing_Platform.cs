@@ -10,7 +10,13 @@ public class Collapsing_Platform : Touchable
         collider = gameObject.GetComponent<Collider2D>();
         StartCoroutine(DestroyPlatform());
     }
-
+    public override void ObjectReset()
+    {
+        StopAllCoroutines();
+        collider = gameObject.GetComponent<Collider2D>();
+        collider.enabled = true;
+        gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+    }
     private IEnumerator DestroyPlatform()
     {
         yield return new WaitForSeconds(0.5f);

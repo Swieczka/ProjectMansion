@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Touchable : MonoBehaviour
+public class Touchable : LevelObject
 {
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -11,10 +11,5 @@ public class Touchable : MonoBehaviour
         {
             Action();
         }
-    }
-
-    public virtual void Action()
-    {
-
     }
 }
