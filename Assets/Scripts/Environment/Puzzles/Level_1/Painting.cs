@@ -7,12 +7,7 @@ public class Painting : Puzzle
     [SerializeField] Vector3 objectPos;
     private void Awake()
     {
-        objectPos = transform.position;
         _Manager = GetComponentInParent<Puzzle_Manager>();
-    }
-    private void Update()
-    {
-        
     }
     protected override void PuzzleCheck()
     {

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Puzzle : Interactable
 {
-    [SerializeField] protected int _state;
-    [SerializeField] protected int _correct_state;
+    [SerializeField] public int _state;
+    [SerializeField] public int _correct_state;
     [SerializeField] public bool _has_correct_state;
     [SerializeField] public Puzzle_Manager _Manager;
 

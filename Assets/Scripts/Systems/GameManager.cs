@@ -25,8 +25,8 @@ public class GameManager : MonoBehaviour
         }
         DontDestroyOnLoad(gameObject);
         LoadInMenu();
-        Scene X = SceneManager.GetActiveScene();
-        if (X.buildIndex !=0)
+        Scene currScene = SceneManager.GetActiveScene();
+        if (currScene.buildIndex !=0)
         {
             LoadGame();
         }

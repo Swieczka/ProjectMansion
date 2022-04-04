@@ -14,11 +14,12 @@ public class LandingArea : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.GetComponent<Painting>() != null)
+        if(collision.gameObject.GetComponent<Puzzle>() != null)
         {
             collision.gameObject.transform.position = areaPos;
             collision.gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
-         //   collision.gameObject.GetComponent<Painting>()
+            collision.gameObject.GetComponent<Puzzle>()._state = areaIndex;
+            collision.gameObject.GetComponent<Puzzle>().Action();
         }
     }
 }
