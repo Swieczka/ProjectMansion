@@ -346,7 +346,7 @@ TextureImporter:
       physicsShape:
       - - {x: -8, y: -8}
         - {x: -5, y: -8}
-        - {x: -5, y: -6}
+        - {x: -5, y: -5}
         - {x: -5, y: -5}
         - {x: -8, y: -5}
       tessellationDetail: 0

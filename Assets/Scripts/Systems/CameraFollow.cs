@@ -26,12 +26,21 @@ public class CameraFollow : MonoBehaviour
         Vector3 startPos = transform.position;
         Vector3 endPos = Player.transform.position;
 
-        endPos.x = posOffset.x;
-        endPos.y = posOffset.y;
+        endPos.x += posOffset.x;
+        endPos.y = transform.position.y;
         endPos.z = -10;
 
         transform.position = Vector3.Lerp(startPos, endPos, timeOffset*Time.deltaTime);
 
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, leftLimit, rightLimit),Mathf.Clamp(transform.position.y, topLimit, bottomLimit),transform.position.z);
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(new Vector2(leftLimit,topLimit),new Vector2(rightLimit,topLimit));
+        Gizmos.DrawLine(new Vector2(rightLimit, topLimit), new Vector2(rightLimit, bottomLimit));
+        Gizmos.DrawLine(new Vector2(rightLimit, bottomLimit), new Vector2(leftLimit, bottomLimit));
+        Gizmos.DrawLine(new Vector2(leftLimit, bottomLimit), new Vector2(leftLimit, topLimit));
     }
 }
