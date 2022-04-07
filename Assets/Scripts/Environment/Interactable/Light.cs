@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Light : Interactable
 {
+    [SerializeField] private bool _OnGameLoadStay;
     void Update()
     {
 
@@ -23,6 +24,10 @@ public class Light : Interactable
 
     public override void ObjectReset()
     {
-        gameObject.SetActive(false);
+        if(!_OnGameLoadStay)
+        {
+            gameObject.SetActive(false);
+        }
+        
     }
 }

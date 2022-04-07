@@ -21,9 +21,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Tutorial/Tutorial - Road.unity
     guid: c3760a56fabf3bc48b9ed32ed3df1db0
   - enabled: 1
-    path: Assets/Scenes/Tutorial/Corridor.unity
-    guid: 0bfadc9a19438ee468c73396c70271e1
+    path: Assets/Scenes/Tutorial/Tutorial-Garden.unity
+    guid: f139e5cce001c494a8ff432f0acd9ab7
   - enabled: 1
     path: Assets/Scenes/Basement.unity
     guid: 091e8b579fc475b44911a32c4ebeb0b0
+  - enabled: 1
+    path: Assets/Scenes/Corridor.unity
+    guid: 0bfadc9a19438ee468c73396c70271e1
   m_configObjects: {}

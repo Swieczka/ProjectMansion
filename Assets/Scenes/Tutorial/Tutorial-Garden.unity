@@ -30786,30 +30786,6 @@ Transform:
   m_Father: {fileID: 1792775069}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &969894411 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3349123621136057350, guid: c92974e50bb57304aac6e8307b652944, type: 3}
-  m_PrefabInstance: {fileID: 1665993400}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &969894412
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 969894411}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ece301647302f084da657dffe105047d, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &987717685 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6516264203893957804, guid: 35b11782537ef834dae01c04ab112a9a, type: 3}
@@ -30848,7 +30824,7 @@ MonoBehaviour:
   _camera_x: 0
   _camera_y: 0
   _player_respawn_position: {x: 0, y: 0, z: 0}
-  StoryCollectibles: 0101
+  StoryCollectibles: 010101
 --- !u!4 &1045380348
 Transform:
   m_ObjectHideFlags: 0
@@ -30861,7 +30837,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1054856826
 GameObject:

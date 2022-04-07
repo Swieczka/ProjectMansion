@@ -322,8 +322,6 @@ MonoBehaviour:
   CurrentBiom: 0
   _camera_x: 0
   _camera_y: 0
-  _player_x: 0
-  _player_y: 0
   _player_respawn_position: {x: 0, y: 0, z: 0}
   StoryCollectibles: 0101
 --- !u!4 &442845513

@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Spikes
+  - Web
   layers:
   - Default
   - TransparentFX

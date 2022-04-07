@@ -9,4 +9,5 @@ public class Crate : LevelObject
     {
         gameObject.transform.position = cratePos;
     }
+
 }

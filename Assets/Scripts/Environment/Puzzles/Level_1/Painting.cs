@@ -9,6 +9,19 @@ public class Painting : Puzzle
     {
         _Manager = GetComponentInParent<Puzzle_Manager>();
     }
+
+    private void Update()
+    {
+        Rigidbody2D _rb = GetComponent<Rigidbody2D>();
+        if(_rb.velocity.y < 0)
+        {
+            _rb.gravityScale = 4f;
+        }
+        else
+        {
+            _rb.gravityScale = 1;
+        }
+    }
     protected override void PuzzleCheck()
     {
        if(_state == _correct_state)
@@ -30,6 +43,7 @@ public class Painting : Puzzle
     public override void ResetPuzzle()
     {
         gameObject.transform.position = objectPos;
+        GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
     }
 
     public override void ObjectReset()

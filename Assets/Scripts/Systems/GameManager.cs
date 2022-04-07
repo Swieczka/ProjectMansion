@@ -24,11 +24,15 @@ public class GameManager : MonoBehaviour
             instance = this; 
         }
         DontDestroyOnLoad(gameObject);
-        LoadInMenu();
+        
         Scene currScene = SceneManager.GetActiveScene();
         if (currScene.buildIndex !=0)
         {
             LoadGame();
+        }
+        else
+        {
+            LoadInMenu();
         }
         
     }
@@ -94,13 +98,13 @@ public class GameManager : MonoBehaviour
 
         _camera_x = data.camPos[0];
         _camera_y = data.camPos[1];
-
-        for (int i = 0; i < StoryCollectibles.Count; i++)
-        {
-            StoryCollectibles[i] = data.StoryCollectibles[i];
-        }
         ChangeCameraPos(_camera_x, _camera_y);
         GameObject.FindGameObjectWithTag("Player").transform.position = _player_respawn_position;
+       /* for (int i = 0; i < StoryCollectibles.Count; i++)
+        {
+            StoryCollectibles[i] = data.StoryCollectibles[i];
+        } */
+        
     }
     public void SaveGame()
     {

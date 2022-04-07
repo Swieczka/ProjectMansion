@@ -13,9 +13,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask _groundLayer;
 
     [Header("Movement Variables")]
-    [SerializeField] private float _movementSpeedx;
-    [SerializeField] private float _movementSpeedy;
     [SerializeField] private float _movementAcceleration;
+    [SerializeField] private float _movementBuff;
     [SerializeField] private float _maxMoveSpeed;
     [SerializeField] private float _maxMoveSpeedInit;
     [SerializeField] private float _groundLinearDrag;
@@ -77,10 +76,7 @@ public class PlayerMovement : MonoBehaviour
     {
         _horizontalDirection = GetInput().x;
         _verticalDirection = GetInput().y;
-        if (_canJump)
-        {
-            Jump();
-        }
+        
         if(Input.GetButtonDown("Dash"))
         {
             _dashBufferCounter = _dashBufferLength;
@@ -90,14 +86,15 @@ public class PlayerMovement : MonoBehaviour
             _dashBufferCounter -= Time.deltaTime;
             
         }
-        
+        if (_canJump)
+        {
+            Jump();
+        }
         WallSlide();
         if ((_horizontalDirection < 0f && _facingRight || _horizontalDirection > 0f && !_facingRight))
         {
             SwitchDirection();
         }
-        _movementSpeedx = _rb.velocity.x;
-        _movementSpeedy = _rb.velocity.y;
         Animation();
     }
 
@@ -120,6 +117,7 @@ public class PlayerMovement : MonoBehaviour
             }
             ApplyDrag();
         }
+       
 
     }
     private static Vector2 GetInput()
@@ -128,7 +126,7 @@ public class PlayerMovement : MonoBehaviour
     }
     private void MovePlayer()
     {
-        _rb.AddForce(new Vector2(_horizontalDirection, 0f)*_movementAcceleration);
+        _rb.AddForce(new Vector2(_horizontalDirection, 0f)*_movementAcceleration*_movementBuff);
         if(_rb.velocity.x < 0.1f && _rb.velocity.x > -0.1f)
         {
             _rb.velocity = new Vector2(0,_rb.velocity.y);
@@ -137,9 +135,9 @@ public class PlayerMovement : MonoBehaviour
         {
             _rb.velocity = new Vector2(_rb.velocity.x, 0);
         }
-        if (Mathf.Abs(_rb.velocity.x) > _maxMoveSpeed)
+        if (Mathf.Abs(_rb.velocity.x) > _maxMoveSpeed*_movementBuff)
         {
-            _rb.velocity=new Vector2(Mathf.Sign(_rb.velocity.x)*_maxMoveSpeed,_rb.velocity.y);
+            _rb.velocity=new Vector2(Mathf.Sign(_rb.velocity.x)*_maxMoveSpeed*_movementBuff,_rb.velocity.y);
         }
     }
 
@@ -259,11 +257,11 @@ public class PlayerMovement : MonoBehaviour
         Vector3 left_wallslide_checkdown = new Vector3(transform.position.x, transform.position.y - 0.4f, transform.position.z);
         Vector3 right_wallslide_checkdown = new Vector3(transform.position.x, transform.position.y - 0.4f, transform.position.z);
         Gizmos.color = Color.magenta;
-        Gizmos.DrawLine(left_wallslide_check, left_wallslide_check + Vector3.left * (_groundRaycastLength/1.5f));
-        Gizmos.DrawLine(right_wallslide_check, right_wallslide_check + Vector3.right * (_groundRaycastLength / 1.5f));
+        Gizmos.DrawLine(left_wallslide_check, left_wallslide_check + Vector3.left * (_groundRaycastLength/1.9f));
+        Gizmos.DrawLine(right_wallslide_check, right_wallslide_check + Vector3.right * (_groundRaycastLength / 1.9f));
         Gizmos.color = Color.cyan;
-        Gizmos.DrawLine(left_wallslide_checkdown, left_wallslide_checkdown + Vector3.left * (_groundRaycastLength / 1.5f));
-        Gizmos.DrawLine(right_wallslide_checkdown, right_wallslide_checkdown + Vector3.right * (_groundRaycastLength / 1.5f));
+        Gizmos.DrawLine(left_wallslide_checkdown, left_wallslide_checkdown + Vector3.left * (_groundRaycastLength / 1.9f));
+        Gizmos.DrawLine(right_wallslide_checkdown, right_wallslide_checkdown + Vector3.right * (_groundRaycastLength / 1.9f));
     }
 
     private void FallMultiplier()
@@ -288,10 +286,10 @@ public class PlayerMovement : MonoBehaviour
         Vector3 right_wallslide_check = new Vector3(transform.position.x, transform.position.y, transform.position.z);
         Vector3 left_wallslide_checkdown = new Vector3(transform.position.x, transform.position.y - 0.4f, transform.position.z);
         Vector3 right_wallslide_checkdown = new Vector3(transform.position.x, transform.position.y - 0.4f, transform.position.z);
-        bool _left_check_up = Physics2D.Raycast(left_wallslide_check, Vector2.left, _groundRaycastLength/1.5f, _groundLayer);
-        bool _right_check_up = Physics2D.Raycast(right_wallslide_check, Vector2.right, _groundRaycastLength/1.5f, _groundLayer);
-        bool _left_check_down = Physics2D.Raycast(left_wallslide_checkdown, Vector2.left, _groundRaycastLength/1.5f, _groundLayer);
-        bool _right_check_down = Physics2D.Raycast(right_wallslide_checkdown, Vector2.right, _groundRaycastLength/1.5f, _groundLayer);
+        bool _left_check_up = Physics2D.Raycast(left_wallslide_check, Vector2.left, _groundRaycastLength/1.9f, _groundLayer);
+        bool _right_check_up = Physics2D.Raycast(right_wallslide_check, Vector2.right, _groundRaycastLength/1.9f, _groundLayer);
+        bool _left_check_down = Physics2D.Raycast(left_wallslide_checkdown, Vector2.left, _groundRaycastLength/1.9f, _groundLayer);
+        bool _right_check_down = Physics2D.Raycast(right_wallslide_checkdown, Vector2.right, _groundRaycastLength/1.9f, _groundLayer);
         if(!_onGround && _rb.velocity.y < 0 && (_left_check_up || _right_check_up || _left_check_down || _right_check_down))
         {
             _isWallSliding = true;
@@ -328,19 +326,28 @@ public class PlayerMovement : MonoBehaviour
             gameManager.LoadGame();
         }
     }
-
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag =="Web")
+        {
+            _extraJumps = 0;
+            _extraJumpsValue = 0;
+            _movementBuff = 0.5f;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Web")
+        {
+            _extraJumps = 1;
+            _movementBuff = 1f;
+        }
+        
+    }
     private void SwitchDirection()
     {
         _facingRight = !_facingRight;
         transform.Rotate(0f, 180f, 0f);
-      /*  if (_horizontalDirection > 0)
-        {
-            transform.localScale = new Vector3(2f,2f,2f);
-        }
-        else if(_horizontalDirection < 0)
-        {
-            transform.localScale = new Vector3(-2f, 2f, 2f);
-        }*/
     }
 
     private void Animation()
