@@ -1,31 +1,61 @@
 fileFormatVersion: 2
-guid: 30003dc0c6e347e488ff4ef0b62846c0
+guid: 42a484ac40b07544fba49c83a2402190
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4842455348265847203
-    second: Broken_furnitures_0
+      213: -112679736282943891
+    second: Basement Disappearing Platform x2_0
   - first:
-      213: -4498490993115939630
-    second: Broken_furnitures_1
+      213: -3831243667228723025
+    second: Basement Disappearing Platform x2_1
   - first:
-      213: 2439249242908334570
-    second: Broken_furnitures_2
+      213: -6805481011990917239
+    second: Basement Disappearing Platform x2_2
   - first:
-      213: 5328602896823301663
-    second: Broken_furnitures_3
+      213: -1097208495724318400
+    second: Basement Disappearing Platform x2_3
   - first:
-      213: 5110733329526781804
-    second: Broken_furnitures_4
+      213: 5835677492774328928
+    second: Basement Disappearing Platform x2_4
   - first:
-      213: 98972070856977333
-    second: Broken_furnitures_5
+      213: 3363715403000389339
+    second: Basement Disappearing Platform x2_5
   - first:
-      213: 4704885158833618656
-    second: Broken_furnitures_6
+      213: -904794456970979422
+    second: Basement Disappearing Platform x2_6
   - first:
-      213: 494551602856927599
-    second: Broken_furnitures_7
+      213: 6420181081368273323
+    second: Basement Disappearing Platform x2_7
+  - first:
+      213: -6459696765556544565
+    second: Basement Disappearing Platform x2_8
+  - first:
+      213: -3648357611027826582
+    second: Basement Disappearing Platform x2_9
+  - first:
+      213: 7063829102284424593
+    second: Basement Disappearing Platform x2_10
+  - first:
+      213: -802361525897483686
+    second: Basement Disappearing Platform x2_11
+  - first:
+      213: 5619391156529927442
+    second: Basement Disappearing Platform x2_12
+  - first:
+      213: -6842625800574096228
+    second: Basement Disappearing Platform x2_13
+  - first:
+      213: 4296187167599144040
+    second: Basement Disappearing Platform x2_14
+  - first:
+      213: 1451229151971587118
+    second: Basement Disappearing Platform x2_15
+  - first:
+      213: -1479307211664530382
+    second: Basement Disappearing Platform x2_16
+  - first:
+      213: -2412865941123963468
+    second: Basement Disappearing Platform x2_17
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -70,7 +100,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 320
+  spritePixelsToUnits: 160
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -115,76 +145,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Broken_furnitures_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 1280
-        width: 640
-        height: 640
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3a9831a9b7bd33340800000000000000
-      internalID: 4842455348265847203
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Broken_furnitures_1
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 1280
-        width: 640
-        height: 640
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2dcb70a96462291c0800000000000000
-      internalID: -4498490993115939630
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Broken_furnitures_2
-      rect:
-        serializedVersion: 2
-        x: 1280
-        y: 1280
-        width: 640
-        height: 640
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ae911324344f9d120800000000000000
-      internalID: 2439249242908334570
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Broken_furnitures_3
+      name: Basement Disappearing Platform x2_0
       rect:
         serializedVersion: 2
         x: 0
         y: 640
-        width: 640
-        height: 640
+        width: 320
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,20 +159,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f16354e3a1003f940800000000000000
-      internalID: 5328602896823301663
+      spriteID: d6e6879706eaf6ef0800000000000000
+      internalID: -112679736282943891
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Broken_furnitures_4
+      name: Basement Disappearing Platform x2_1
       rect:
         serializedVersion: 2
-        x: 640
+        x: 320
         y: 640
-        width: 640
-        height: 640
+        width: 320
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,20 +180,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c677138a2e8fce640800000000000000
-      internalID: 5110733329526781804
+      spriteID: fa8fdd6fe20b4dac0800000000000000
+      internalID: -3831243667228723025
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Broken_furnitures_5
+      name: Basement Disappearing Platform x2_2
       rect:
         serializedVersion: 2
-        x: 1280
-        y: 640
-        width: 640
-        height: 640
+        x: 0
+        y: 480
+        width: 320
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,20 +201,125 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5bb6d16f29e9f5100800000000000000
-      internalID: 98972070856977333
+      spriteID: 98f8d9a93131e81a0800000000000000
+      internalID: -6805481011990917239
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Broken_furnitures_6
+      name: Basement Disappearing Platform x2_3
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 480
+        width: 320
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 041bfc7bfaee5c0f0800000000000000
+      internalID: -1097208495724318400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement Disappearing Platform x2_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 320
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06a5e8cc2cd7cf050800000000000000
+      internalID: 5835677492774328928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement Disappearing Platform x2_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 320
+        width: 320
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bde195956515eae20800000000000000
+      internalID: 3363715403000389339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement Disappearing Platform x2_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 320
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a790853c368173f0800000000000000
+      internalID: -904794456970979422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement Disappearing Platform x2_7
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 160
+        width: 320
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba1a3ac8da0191950800000000000000
+      internalID: 6420181081368273323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement Disappearing Platform x2_8
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 640
-        height: 640
+        width: 320
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -255,29 +327,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0eef849df1c1b4140800000000000000
-      internalID: 4704885158833618656
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Broken_furnitures_7
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 0
-        width: 640
-        height: 640
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f61236300100dd600800000000000000
-      internalID: 494551602856927599
+      spriteID: bcb2344440c8a56a0800000000000000
+      internalID: -6459696765556544565
       vertices: []
       indices: 
       edges: []
