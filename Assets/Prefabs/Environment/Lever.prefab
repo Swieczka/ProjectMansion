@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -3769759845917220838, guid: 6c47b7f6148d9b84296e359085fb6343, type: 3}
+  m_Sprite: {fileID: -8748991493944491394, guid: e0e92efb771c13b4a9ef11e61b9db12d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -125,7 +125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   is_player_nearby: 0
   LeverSprites:
-  - {fileID: 7454430170701327748, guid: 6c47b7f6148d9b84296e359085fb6343, type: 3}
-  - {fileID: -3769759845917220838, guid: 6c47b7f6148d9b84296e359085fb6343, type: 3}
+  - {fileID: 4324149055474454536, guid: e0e92efb771c13b4a9ef11e61b9db12d, type: 3}
+  - {fileID: -8748991493944491394, guid: e0e92efb771c13b4a9ef11e61b9db12d, type: 3}
   _isLeverActive: 0
   _gameObjecttoInteract: {fileID: 0}
