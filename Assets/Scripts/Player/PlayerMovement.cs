@@ -36,8 +36,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float _airLinearDrag = 2.5f;
     [SerializeField] private float _fallMultiplier = 8f; 
     [SerializeField] private float _lowJumpFallMultiplier = 5f;
-    [SerializeField] private int _extraJumps = 1;
-    [SerializeField] private int _extraJumpsValue;
+    public int _extraJumps = 1;
+    public int _extraJumpsValue;
 
     [Header("Ground Collision Variables")]
     [SerializeField] private float _groundRaycastLength;
@@ -324,6 +324,10 @@ public class PlayerMovement : MonoBehaviour
         if(collision.collider.gameObject.tag == "Spikes")
         {
             gameManager.LoadGame();
+        }
+        if(collision.collider.gameObject.tag == "JumpWall")
+        {
+            _extraJumpsValue = _extraJumps;
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)

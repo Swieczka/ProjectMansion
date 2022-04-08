@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Spikes
   - Web
+  - JumpWall
   layers:
   - Default
   - TransparentFX
