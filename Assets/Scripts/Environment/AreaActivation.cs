@@ -9,7 +9,7 @@ public class AreaActivation : LevelObject
     {
         if (collision.gameObject.tag == "Player")
         {
-            _gameObjecttoInteract.GetComponent<Interactable>().Action();
+            _gameObjecttoInteract.GetComponent<LevelObject>().Action();
             gameObject.GetComponent<Collider2D>().enabled = false;
         }
     }

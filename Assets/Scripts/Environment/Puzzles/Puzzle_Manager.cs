@@ -8,7 +8,6 @@ public class Puzzle_Manager : MonoBehaviour
     {
         Check();
     }
-
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Q))

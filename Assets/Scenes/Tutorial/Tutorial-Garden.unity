@@ -30890,7 +30890,8 @@ MonoBehaviour:
   - {fileID: 7454430170701327748, guid: 62067a2265742c444b6a9c52f6916f97, type: 3}
   - {fileID: -3769759845917220838, guid: 62067a2265742c444b6a9c52f6916f97, type: 3}
   _isLeverActive: 0
-  _gameObjecttoInteract: {fileID: 3692240}
+  _gameObjecttoInteract:
+  - {fileID: 3692240}
 --- !u!61 &1054856829
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -4041,6 +4041,10 @@ PrefabInstance:
       propertyPath: _gameObjecttoInteract
       value: 
       objectReference: {fileID: 322176973}
+    - target: {fileID: 4264000608394330679, guid: a078931e1c69e474b9fcfc13a7402018, type: 3}
+      propertyPath: _gameObjecttoInteract.Array.data[0]
+      value: 
+      objectReference: {fileID: 322176973}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a078931e1c69e474b9fcfc13a7402018, type: 3}
 --- !u!4 &209391635 stripped
@@ -56948,7 +56952,8 @@ MonoBehaviour:
   - {fileID: 7454430170701327748, guid: 6c47b7f6148d9b84296e359085fb6343, type: 3}
   - {fileID: -3769759845917220838, guid: 6c47b7f6148d9b84296e359085fb6343, type: 3}
   _isLeverActive: 0
-  _gameObjecttoInteract: {fileID: 1998361410}
+  _gameObjecttoInteract:
+  - {fileID: 1998361410}
 --- !u!61 &672518066
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -59424,6 +59429,10 @@ PrefabInstance:
       propertyPath: _gameObjecttoInteract
       value: 
       objectReference: {fileID: 1572532925}
+    - target: {fileID: 4264000608394330679, guid: a078931e1c69e474b9fcfc13a7402018, type: 3}
+      propertyPath: _gameObjecttoInteract.Array.data[0]
+      value: 
+      objectReference: {fileID: 1572532925}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a078931e1c69e474b9fcfc13a7402018, type: 3}
 --- !u!4 &809452057 stripped
@@ -59816,6 +59825,10 @@ PrefabInstance:
       propertyPath: _gameObjecttoInteract
       value: 
       objectReference: {fileID: 1836084409}
+    - target: {fileID: 4264000608394330679, guid: a078931e1c69e474b9fcfc13a7402018, type: 3}
+      propertyPath: _gameObjecttoInteract.Array.data[0]
+      value: 
+      objectReference: {fileID: 1836084409}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a078931e1c69e474b9fcfc13a7402018, type: 3}
 --- !u!4 &835012116 stripped
@@ -59896,6 +59909,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4264000608394330679, guid: a078931e1c69e474b9fcfc13a7402018, type: 3}
       propertyPath: _gameObjecttoInteract
+      value: 
+      objectReference: {fileID: 266932424}
+    - target: {fileID: 4264000608394330679, guid: a078931e1c69e474b9fcfc13a7402018, type: 3}
+      propertyPath: _gameObjecttoInteract.Array.data[0]
       value: 
       objectReference: {fileID: 266932424}
     m_RemovedComponents: []
@@ -62298,6 +62315,10 @@ PrefabInstance:
       propertyPath: _gameObjecttoInteract
       value: 
       objectReference: {fileID: 938775069}
+    - target: {fileID: 4264000608394330679, guid: a078931e1c69e474b9fcfc13a7402018, type: 3}
+      propertyPath: _gameObjecttoInteract.Array.data[0]
+      value: 
+      objectReference: {fileID: 938775069}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a078931e1c69e474b9fcfc13a7402018, type: 3}
 --- !u!4 &964640703 stripped
@@ -63191,7 +63212,8 @@ MonoBehaviour:
   - {fileID: 7454430170701327748, guid: 6c47b7f6148d9b84296e359085fb6343, type: 3}
   - {fileID: -3769759845917220838, guid: 6c47b7f6148d9b84296e359085fb6343, type: 3}
   _isLeverActive: 0
-  _gameObjecttoInteract: {fileID: 597955839}
+  _gameObjecttoInteract:
+  - {fileID: 597955839}
 --- !u!61 &995227952
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -83010,6 +83032,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4264000608394330679, guid: a078931e1c69e474b9fcfc13a7402018, type: 3}
       propertyPath: _gameObjecttoInteract
+      value: 
+      objectReference: {fileID: 1808986937}
+    - target: {fileID: 4264000608394330679, guid: a078931e1c69e474b9fcfc13a7402018, type: 3}
+      propertyPath: _gameObjecttoInteract.Array.data[0]
       value: 
       objectReference: {fileID: 1808986937}
     m_RemovedComponents: []
