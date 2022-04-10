@@ -108324,11 +108324,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8915856301218388063, guid: c92974e50bb57304aac6e8307b652944, type: 3}
       propertyPath: _extraJumps
-      value: 10
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8915856301218388063, guid: c92974e50bb57304aac6e8307b652944, type: 3}
       propertyPath: _extraJumpsValue
-      value: 10
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8915856301218388063, guid: c92974e50bb57304aac6e8307b652944, type: 3}
       propertyPath: _wallSlidingDrag
