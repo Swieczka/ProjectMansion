@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4101960774731653702}
   - component: {fileID: 2566996350129828112}
   - component: {fileID: 3508285977685742899}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: FallingPlatform_Static
   m_TagString: Spikes
   m_Icon: {fileID: 0}
@@ -159,7 +159,7 @@ GameObject:
   - component: {fileID: 2011805927651609300}
   - component: {fileID: 7332022974463373468}
   - component: {fileID: 6057169841302364422}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: ActivationArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}

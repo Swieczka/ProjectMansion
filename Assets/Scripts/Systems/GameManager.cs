@@ -25,8 +25,13 @@ public class GameManager : MonoBehaviour
         }
         DontDestroyOnLoad(gameObject);
         
+        
+        
+    }
+    void Start()
+    {
         Scene currScene = SceneManager.GetActiveScene();
-        if (currScene.buildIndex !=0)
+        if (currScene.buildIndex != 0)
         {
             LoadGame();
         }
@@ -34,11 +39,6 @@ public class GameManager : MonoBehaviour
         {
             LoadInMenu();
         }
-        
-    }
-    void Start()
-    {
-        
     }
     void Update()
     {
@@ -87,7 +87,7 @@ public class GameManager : MonoBehaviour
     }
     public void LoadGame()
     {
-        ResetObjects();
+      //  ResetObjects();
         SaveData data = SaveSystem.LoadGame();
         CurrentBiom = data.CurrentBiom;
         Vector3 pos;

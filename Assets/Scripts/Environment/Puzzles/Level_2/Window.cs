@@ -45,4 +45,10 @@ public class Window : Puzzle
         PuzzleCheck();
         _Manager.Check();
     }
+
+    public override void ObjectReset()
+    {
+        _state = 0;
+        PuzzleCheck();
+    }
 }

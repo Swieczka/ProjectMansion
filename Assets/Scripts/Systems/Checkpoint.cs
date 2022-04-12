@@ -15,8 +15,12 @@ public class Checkpoint : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        gameManager.ChangeCameraPos(_cam_x, _cam_y);
-        gameManager.ChangePlayerRespawn(_player_pos);
-        gameManager.SaveGame();
+        if(collision.gameObject.tag == "Player")
+        {
+            gameManager.ChangeCameraPos(_cam_x, _cam_y);
+            gameManager.ChangePlayerRespawn(_player_pos);
+            gameManager.SaveGame();
+        }
+        
     }
 }

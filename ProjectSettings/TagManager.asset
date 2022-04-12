@@ -7,6 +7,8 @@ TagManager:
   - Spikes
   - Web
   - JumpWall
+  - BreakRydwan
+  - RydwanWall
   layers:
   - Default
   - TransparentFX

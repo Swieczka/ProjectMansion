@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2566996350129828112}
   - component: {fileID: 3508285977685742899}
   - component: {fileID: 6626008711459280003}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: FallingPlatform_Animated
   m_TagString: Spikes
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.15704346, y: -0.51782906}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -112,7 +112,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.276474, y: 0.65470386}
   m_EdgeRadius: 0
 --- !u!50 &2566996350129828112
 Rigidbody2D:
@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 2011805927651609300}
   - component: {fileID: 7332022974463373468}
   - component: {fileID: 6057169841302364422}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: ActivationArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -213,7 +213,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.01881218, y: 0.2459287}
+  m_Offset: {x: 0, y: 0.16}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -224,7 +224,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.3567123, y: 0.5081426}
+  m_Size: {x: 1, y: 0.5}
   m_EdgeRadius: 0
 --- !u!114 &6057169841302364422
 MonoBehaviour:
