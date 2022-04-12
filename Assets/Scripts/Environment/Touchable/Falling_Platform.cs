@@ -17,6 +17,7 @@ public class Falling_Platform : LevelObject
     public override void Action()
     {
         GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+        GetComponent<Rigidbody2D>().freezeRotation = true;
         GetComponent<Rigidbody2D>().gravityScale = gravitySpeed;
         if(GetComponent<Animator>() != null)
         {
@@ -43,13 +44,13 @@ public class Falling_Platform : LevelObject
     {
         if(collision.collider.tag == "Player" || collision.collider.gameObject.layer == 8)
         {
-            StartCoroutine(Wait(2));
-            ObjectReset();
+            StartCoroutine(Wait(1));  
         }
     }
 
     private IEnumerator Wait(float time)
     {
         yield return new WaitForSeconds(time);
+        ObjectReset();
     }
 }
