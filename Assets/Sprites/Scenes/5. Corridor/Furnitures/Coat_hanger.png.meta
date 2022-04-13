@@ -1,22 +1,13 @@
 fileFormatVersion: 2
-guid: 41ceb44a768df404da6e7dbf2f15ceb5
+guid: b16cb7704469e634bbbf93f2639bbaec
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2192001323238916713
-    second: Covered_furnitures_0
+      213: 1574754171722289479
+    second: Coat_hanger_0
   - first:
-      213: -4379962620430085049
-    second: Covered_furnitures_1
-  - first:
-      213: -7478584581544017411
-    second: Covered_furnitures_2
-  - first:
-      213: 6665774851892896796
-    second: Covered_furnitures_3
-  - first:
-      213: -362701872006662651
-    second: Covered_furnitures_4
+      213: 6645650005786714322
+    second: Coat_hanger_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -106,49 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Covered_furnitures_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 1280
-        width: 640
-        height: 640
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 79d782509627491e0800000000000000
-      internalID: -2192001323238916713
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Covered_furnitures_1
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 1280
-        width: 640
-        height: 640
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 74496c7e33f3733c0800000000000000
-      internalID: -4379962620430085049
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Covered_furnitures_2
+      name: Coat_hanger_0
       rect:
         serializedVersion: 2
         x: 0
@@ -162,35 +111,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df10b5242fab63890800000000000000
-      internalID: -7478584581544017411
+      spriteID: 74152166396aad510800000000000000
+      internalID: 1574754171722289479
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Covered_furnitures_3
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 640
-        width: 640
-        height: 640
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c14eec739e6918c50800000000000000
-      internalID: 6665774851892896796
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Covered_furnitures_4
+      name: Coat_hanger_1
       rect:
         serializedVersion: 2
         x: 0
@@ -204,8 +132,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5067cafa19c67faf0800000000000000
-      internalID: -362701872006662651
+      spriteID: 2d06d7858771a3c50800000000000000
+      internalID: 6645650005786714322
       vertices: []
       indices: 
       edges: []
