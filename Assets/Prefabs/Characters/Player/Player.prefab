@@ -192,7 +192,7 @@ MonoBehaviour:
   _airLinearDrag: 1.2
   _fallMultiplier: 6
   _lowJumpFallMultiplier: 5
-  _extraJumps: 10
+  _extraJumps: 1
   _extraJumpsValue: 0
   _groundRaycastLength: 0.8
   _onGround: 0

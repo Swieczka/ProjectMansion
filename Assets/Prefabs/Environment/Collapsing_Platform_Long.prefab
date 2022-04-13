@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 495145086446366534}
   - component: {fileID: 2738716712980457388}
   - component: {fileID: 8025300180619314444}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collapsing_Platform_Long
   m_TagString: Untagged
   m_Icon: {fileID: 0}

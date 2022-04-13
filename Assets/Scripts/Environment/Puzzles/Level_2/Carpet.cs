@@ -42,4 +42,8 @@ public class Carpet : LevelObject
             collision.collider.gameObject.transform.parent = transform.parent.transform.parent;
         }
     }
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawLine(startPos, endPos);
+    }
 }

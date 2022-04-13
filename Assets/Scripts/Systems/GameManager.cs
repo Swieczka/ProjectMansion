@@ -87,7 +87,7 @@ public class GameManager : MonoBehaviour
     }
     public void LoadGame()
     {
-      //  ResetObjects();
+        ResetObjects();
         SaveData data = SaveSystem.LoadGame();
         CurrentBiom = data.CurrentBiom;
         Vector3 pos;

@@ -42,6 +42,7 @@ public class Rydwan : LevelObject
         {
             states = RydwanStates.sleeping;
             collision.collider.gameObject.SetActive(false);
+            gameObject.SetActive(false);
         }
         
     }

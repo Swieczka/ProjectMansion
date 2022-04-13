@@ -9,7 +9,7 @@ public class MenuManager : MonoBehaviour
     {
         GameManager.instance.RestartStats();
         SaveSystem.SaveGame(GameManager.instance);
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(2);
     }
 
     public void LoadGame()
