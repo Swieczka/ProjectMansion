@@ -9,6 +9,8 @@ TagManager:
   - JumpWall
   - BreakRydwan
   - RydwanWall
+  - LaserMirror
+  - Laser
   layers:
   - Default
   - TransparentFX
