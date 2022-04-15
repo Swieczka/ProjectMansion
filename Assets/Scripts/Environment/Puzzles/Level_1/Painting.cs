@@ -42,8 +42,7 @@ public class Painting : Puzzle
 
     public override void ResetPuzzle()
     {
-        gameObject.transform.position = objectPos;
-        GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+        ObjectReset();
     }
 
     public override void ObjectReset()
