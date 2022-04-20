@@ -1,37 +1,28 @@
 fileFormatVersion: 2
-guid: 7ed994fa5638f3e47a5644827ea340f3
+guid: 680a412e0fac06c4d90096e57a7d379c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4369383429757728522
-    second: Peyenting Animation_0
+      213: -5836750145612731897
+    second: PC Jump v2_0
   - first:
-      213: -6106105262002197056
-    second: Peyenting Animation_1
+      213: -474756579087081177
+    second: PC Jump v2_1
   - first:
-      213: 8302119655527074423
-    second: Peyenting Animation_2
+      213: 5823606062459389790
+    second: PC Jump v2_2
   - first:
-      213: -7685949956943571128
-    second: Peyenting Animation_3
+      213: 7949340129544338160
+    second: PC Jump v2_3
   - first:
-      213: -5138897261960729327
-    second: Peyenting Animation_4
+      213: -3986489718104033719
+    second: PC Jump v2_4
   - first:
-      213: -690172573495919690
-    second: Peyenting Animation_5
+      213: 7402946287966176847
+    second: PC Jump v2_5
   - first:
-      213: 5421774581183093660
-    second: Peyenting Animation_6
-  - first:
-      213: -436268742421220843
-    second: Peyenting Animation_7
-  - first:
-      213: 5035653295780464108
-    second: Peyenting Animation_8
-  - first:
-      213: 7781460014850739690
-    second: Peyenting Animation_9
+      213: -6373380376378436211
+    second: PC Jump v2_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -121,13 +112,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Peyenting Animation_0
+      name: PC Jump v2_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 480
-        width: 160
-        height: 160
+        y: 640
+        width: 320
+        height: 320
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -135,41 +126,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a07ff22541b23ac30800000000000000
-      internalID: 4369383429757728522
+      spriteID: 70a2b00caa2bffea0800000000000000
+      internalID: -5836750145612731897
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Peyenting Animation_1
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 480
-        width: 160
-        height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0cd2731ad91c24ba0800000000000000
-      internalID: -6106105262002197056
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Peyenting Animation_2
+      name: PC Jump v2_1
       rect:
         serializedVersion: 2
         x: 320
-        y: 480
-        width: 160
-        height: 160
+        y: 640
+        width: 320
+        height: 320
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -177,20 +147,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 77aca7617dd073370800000000000000
-      internalID: 8302119655527074423
+      spriteID: 7212cbc18635969f0800000000000000
+      internalID: -474756579087081177
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Peyenting Animation_3
+      name: PC Jump v2_2
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 640
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5704b8ebda91d050800000000000000
+      internalID: 5823606062459389790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Jump v2_3
       rect:
         serializedVersion: 2
         x: 0
         y: 320
-        width: 160
-        height: 160
+        width: 320
+        height: 320
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -198,41 +189,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 84713fe6c35065590800000000000000
-      internalID: -7685949956943571128
+      spriteID: 0fa7f3cfabab15e60800000000000000
+      internalID: 7949340129544338160
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Peyenting Animation_4
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 320
-        width: 160
-        height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 11d6a93da28fea8b0800000000000000
-      internalID: -5138897261960729327
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Peyenting Animation_5
+      name: PC Jump v2_4
       rect:
         serializedVersion: 2
         x: 320
         y: 320
-        width: 160
-        height: 160
+        width: 320
+        height: 320
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -240,20 +210,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6bbfe0b73b30c66f0800000000000000
-      internalID: -690172573495919690
+      spriteID: 94679a309b42da8c0800000000000000
+      internalID: -3986489718104033719
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Peyenting Animation_6
+      name: PC Jump v2_5
       rect:
         serializedVersion: 2
-        x: 0
-        y: 160
-        width: 160
-        height: 160
+        x: 640
+        y: 320
+        width: 320
+        height: 320
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -261,62 +231,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c9b19ab71430e3b40800000000000000
-      internalID: 5421774581183093660
+      spriteID: f4645892d6c8cb660800000000000000
+      internalID: 7402946287966176847
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Peyenting Animation_7
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 160
-        width: 160
-        height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5127065e3ef02f9f0800000000000000
-      internalID: -436268742421220843
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Peyenting Animation_8
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 160
-        width: 160
-        height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ce505031efb32e540800000000000000
-      internalID: 5035653295780464108
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Peyenting Animation_9
+      name: PC Jump v2_6
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 160
-        height: 160
+        width: 320
+        height: 320
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -324,8 +252,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aed8513d7ac4dfb60800000000000000
-      internalID: 7781460014850739690
+      spriteID: d859487b0543d87a0800000000000000
+      internalID: -6373380376378436211
       vertices: []
       indices: 
       edges: []

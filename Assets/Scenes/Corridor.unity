@@ -9959,27 +9959,27 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1824511547}
+    m_TransformParent: {fileID: 1767627227}
     m_Modifications:
     - target: {fileID: 5787451424450285241, guid: 33cf9247cad20dd4bb6e723cce8516fa, type: 3}
       propertyPath: m_Name
-      value: PushingPainting (3)
+      value: PushingPainting_#4
       objectReference: {fileID: 0}
     - target: {fileID: 5787451424450285245, guid: 33cf9247cad20dd4bb6e723cce8516fa, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5787451424450285245, guid: 33cf9247cad20dd4bb6e723cce8516fa, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 132
+      value: 159.5
       objectReference: {fileID: 0}
     - target: {fileID: 5787451424450285245, guid: 33cf9247cad20dd4bb6e723cce8516fa, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.5
+      value: -1.069
       objectReference: {fileID: 0}
     - target: {fileID: 5787451424450285245, guid: 33cf9247cad20dd4bb6e723cce8516fa, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 22.373741
       objectReference: {fileID: 0}
     - target: {fileID: 5787451424450285245, guid: 33cf9247cad20dd4bb6e723cce8516fa, type: 3}
       propertyPath: m_LocalRotation.w
@@ -10799,6 +10799,7 @@ GameObject:
   - component: {fileID: 635158091}
   - component: {fileID: 635158093}
   - component: {fileID: 635158094}
+  - component: {fileID: 635158095}
   m_Layer: 0
   m_Name: RydwanActivation
   m_TagString: Untagged
@@ -10885,6 +10886,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _gameObjecttoInteract: {fileID: 882153980}
+--- !u!114 &635158095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 635158089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab5cd30566b262c4ca1a7a82dd52beee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameObjecttoInteract: {fileID: 1767627226}
 --- !u!1001 &639056610
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12350,27 +12364,27 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1824511547}
+    m_TransformParent: {fileID: 1767627227}
     m_Modifications:
     - target: {fileID: 5787451424450285241, guid: 33cf9247cad20dd4bb6e723cce8516fa, type: 3}
       propertyPath: m_Name
-      value: PushingPainting (2)
+      value: PushingPainting_#1
       objectReference: {fileID: 0}
     - target: {fileID: 5787451424450285245, guid: 33cf9247cad20dd4bb6e723cce8516fa, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5787451424450285245, guid: 33cf9247cad20dd4bb6e723cce8516fa, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -21
+      value: 6.5
       objectReference: {fileID: 0}
     - target: {fileID: 5787451424450285245, guid: 33cf9247cad20dd4bb6e723cce8516fa, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: 2.931
       objectReference: {fileID: 0}
     - target: {fileID: 5787451424450285245, guid: 33cf9247cad20dd4bb6e723cce8516fa, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 22.373741
       objectReference: {fileID: 0}
     - target: {fileID: 5787451424450285245, guid: 33cf9247cad20dd4bb6e723cce8516fa, type: 3}
       propertyPath: m_LocalRotation.w
@@ -14176,6 +14190,7 @@ GameObject:
   - component: {fileID: 897989506}
   - component: {fileID: 897989507}
   - component: {fileID: 897989508}
+  - component: {fileID: 897989509}
   m_Layer: 0
   m_Name: Rydwan
   m_TagString: Spikes
@@ -14243,8 +14258,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 897989503}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 168, y: -5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 167.57, y: -6.05, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 1824511547}
   m_RootOrder: 7
@@ -14278,18 +14293,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.8230972, y: -2.194037}
+  m_Offset: {x: -0.24912643, y: -0.57863486}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6.4, y: 6.4}
+    oldSize: {x: 2, y: 2}
     newSize: {x: 6.4, y: 6.4}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.3336945, y: 1.9438009}
+  m_Size: {x: 1.4959946, y: 0.8933799}
   m_EdgeRadius: 0
 --- !u!50 &897989508
 Rigidbody2D:
@@ -14312,6 +14327,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!95 &897989509
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 897989503}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f54d70477d4a27b4a853dea0419c6042, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &899234064
 GameObject:
   m_ObjectHideFlags: 0
@@ -67423,7 +67457,7 @@ Transform:
   - {fileID: 2061032651}
   - {fileID: 277499375}
   m_Father: {fileID: 1824511547}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1683186395
 GameObject:
@@ -68400,6 +68434,53 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4264000608394330678, guid: a078931e1c69e474b9fcfc13a7402018, type: 3}
   m_PrefabInstance: {fileID: 1762407782}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1767627226
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1767627227}
+  - component: {fileID: 1767627228}
+  m_Layer: 0
+  m_Name: Pushing Paintings
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1767627227
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1767627226}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -27.5, y: -2.2, z: -22.373741}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 770795739}
+  - {fileID: 1988034558}
+  - {fileID: 471886270}
+  - {fileID: 612375136}
+  m_Father: {fileID: 1824511547}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1767627228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1767627226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1207a3c4e5089a04b9dc0984f05318a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1768084521
 GameObject:
   m_ObjectHideFlags: 0
@@ -69404,11 +69485,8 @@ Transform:
   - {fileID: 897989505}
   - {fileID: 635158090}
   - {fileID: 899234065}
+  - {fileID: 1767627227}
   - {fileID: 1682285178}
-  - {fileID: 471886270}
-  - {fileID: 1988034558}
-  - {fileID: 770795739}
-  - {fileID: 612375136}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -72015,27 +72093,27 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1824511547}
+    m_TransformParent: {fileID: 1767627227}
     m_Modifications:
     - target: {fileID: 5787451424450285241, guid: 33cf9247cad20dd4bb6e723cce8516fa, type: 3}
       propertyPath: m_Name
-      value: PushingPainting (1)
+      value: PushingPainting_#2
       objectReference: {fileID: 0}
     - target: {fileID: 5787451424450285245, guid: 33cf9247cad20dd4bb6e723cce8516fa, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5787451424450285245, guid: 33cf9247cad20dd4bb6e723cce8516fa, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -24.5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5787451424450285245, guid: 33cf9247cad20dd4bb6e723cce8516fa, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.5
+      value: -1.069
       objectReference: {fileID: 0}
     - target: {fileID: 5787451424450285245, guid: 33cf9247cad20dd4bb6e723cce8516fa, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 22.373741
       objectReference: {fileID: 0}
     - target: {fileID: 5787451424450285245, guid: 33cf9247cad20dd4bb6e723cce8516fa, type: 3}
       propertyPath: m_LocalRotation.w
@@ -86107,27 +86185,27 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1824511547}
+    m_TransformParent: {fileID: 1767627227}
     m_Modifications:
     - target: {fileID: 5787451424450285241, guid: 33cf9247cad20dd4bb6e723cce8516fa, type: 3}
       propertyPath: m_Name
-      value: PushingPainting
+      value: PushingPainting_#3
       objectReference: {fileID: 0}
     - target: {fileID: 5787451424450285245, guid: 33cf9247cad20dd4bb6e723cce8516fa, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5787451424450285245, guid: 33cf9247cad20dd4bb6e723cce8516fa, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.5
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 5787451424450285245, guid: 33cf9247cad20dd4bb6e723cce8516fa, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.5
+      value: -1.069
       objectReference: {fileID: 0}
     - target: {fileID: 5787451424450285245, guid: 33cf9247cad20dd4bb6e723cce8516fa, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 22.373741
       objectReference: {fileID: 0}
     - target: {fileID: 5787451424450285245, guid: 33cf9247cad20dd4bb6e723cce8516fa, type: 3}
       propertyPath: m_LocalRotation.w
