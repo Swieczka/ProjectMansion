@@ -1,28 +1,34 @@
 fileFormatVersion: 2
-guid: 0fd0a894d9846c6418edd5c57483c6c3
+guid: 1a1d9211c6a05f24791297f9f039d89c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 945311576081332182
-    second: PC Slide_0
+      213: 786296832641666365
+    second: PC slide low settings_0
   - first:
-      213: -912221039197361028
-    second: PC Slide_1
+      213: -3896742610548824303
+    second: PC slide low settings_1
   - first:
-      213: 2000210453452644569
-    second: PC Slide_2
+      213: -1622746764248235221
+    second: PC slide low settings_2
   - first:
-      213: 928541327714316191
-    second: PC Slide_3
+      213: 6092216958557723909
+    second: PC slide low settings_3
   - first:
-      213: -2345030043355484700
-    second: PC Slide_4
+      213: -1596428486322907395
+    second: PC slide low settings_4
   - first:
-      213: 4139912421078053966
-    second: PC Slide_5
+      213: -2189260134947349615
+    second: PC slide low settings_5
   - first:
-      213: -270291978046981007
-    second: PC Slide_6
+      213: 1793763696878467833
+    second: PC slide low settings_6
+  - first:
+      213: 8771408497088605573
+    second: PC slide low settings_7
+  - first:
+      213: 2132341831962145853
+    second: PC slide low settings_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -112,7 +118,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PC Slide_0
+      name: PC slide low settings_0
       rect:
         serializedVersion: 2
         x: 0
@@ -126,14 +132,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d77466bedb6e1d00800000000000000
-      internalID: 945311576081332182
+      spriteID: d3d0f95adcc79ea00800000000000000
+      internalID: 786296832641666365
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Slide_1
+      name: PC slide low settings_1
       rect:
         serializedVersion: 2
         x: 320
@@ -147,14 +153,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c7ce00a4cc32753f0800000000000000
-      internalID: -912221039197361028
+      spriteID: 117eb15dd3dfbe9c0800000000000000
+      internalID: -3896742610548824303
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Slide_2
+      name: PC slide low settings_2
       rect:
         serializedVersion: 2
         x: 640
@@ -168,14 +174,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d061125fcc22cb10800000000000000
-      internalID: 2000210453452644569
+      spriteID: b23c1946a68da79e0800000000000000
+      internalID: -1622746764248235221
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Slide_3
+      name: PC slide low settings_3
       rect:
         serializedVersion: 2
         x: 0
@@ -189,14 +195,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f9f6eadfa67d2ec00800000000000000
-      internalID: 928541327714316191
+      spriteID: 50d917dbb07eb8450800000000000000
+      internalID: 6092216958557723909
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Slide_4
+      name: PC slide low settings_4
       rect:
         serializedVersion: 2
         x: 320
@@ -210,14 +216,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ed6d2e9997c47fd0800000000000000
-      internalID: -2345030043355484700
+      spriteID: df6986bffb858d9e0800000000000000
+      internalID: -1596428486322907395
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Slide_5
+      name: PC slide low settings_5
       rect:
         serializedVersion: 2
         x: 640
@@ -231,14 +237,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e44b59ba96ce37930800000000000000
-      internalID: 4139912421078053966
+      spriteID: 19b1a87a18f2e91e0800000000000000
+      internalID: -2189260134947349615
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Slide_6
+      name: PC slide low settings_6
       rect:
         serializedVersion: 2
         x: 0
@@ -252,8 +258,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 17c3fd6c0eabf3cf0800000000000000
-      internalID: -270291978046981007
+      spriteID: 9fabe6b149ab4e810800000000000000
+      internalID: 1793763696878467833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC slide low settings_7
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58d2fc02e8d4ab970800000000000000
+      internalID: 8771408497088605573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC slide low settings_8
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d343fc93999979d10800000000000000
+      internalID: 2132341831962145853
       vertices: []
       indices: 
       edges: []
