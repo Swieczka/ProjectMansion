@@ -5,6 +5,7 @@ using UnityEngine;
 public class TrapDoor : LevelObject
 {
     [SerializeField] bool _isTrapDoorOpen;
+    public List<Sprite> _sprites;
     private void Start()
     {
         _isTrapDoorOpen = false;
@@ -14,19 +15,19 @@ public class TrapDoor : LevelObject
         _isTrapDoorOpen = !_isTrapDoorOpen;
         if(_isTrapDoorOpen)
         {
+            GetComponent<SpriteRenderer>().sprite = _sprites[1];
             gameObject.GetComponent<Collider2D>().enabled = false;
-            gameObject.GetComponent<SpriteRenderer>().color = new Color(0f, 0f, 0f, 0.3f);
         }
         else
         {
+            GetComponent<SpriteRenderer>().sprite = _sprites[0];
             gameObject.GetComponent<Collider2D>().enabled = true;
-            gameObject.GetComponent<SpriteRenderer>().color = Color.black;
         }
     }
 
     public override void ObjectReset()
     {
+        GetComponent<SpriteRenderer>().sprite = _sprites[0];
         gameObject.GetComponent<Collider2D>().enabled = true;
-        gameObject.GetComponent<SpriteRenderer>().color = Color.black;
     }
 }

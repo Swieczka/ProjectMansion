@@ -11,6 +11,7 @@ TagManager:
   - RydwanWall
   - LaserMirror
   - Laser
+  - PushingEnemy
   layers:
   - Default
   - TransparentFX

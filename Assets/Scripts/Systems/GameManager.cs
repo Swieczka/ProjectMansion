@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public GameObject pauseMenu;
+
     public static GameManager instance;
     public int CurrentBiom;
     public float _camera_x;
@@ -48,6 +50,19 @@ public class GameManager : MonoBehaviour
         {
             LoadGame();
         }
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            if(pauseMenu.activeInHierarchy)
+            {
+                pauseMenu.SetActive(false);
+                Time.timeScale = 1.0f;
+            }
+            else
+            {
+                Time.timeScale = 0f;
+                pauseMenu.SetActive(true);
+            }
+        }
     }
 
     public void DebugText(string text)
@@ -78,10 +93,10 @@ public class GameManager : MonoBehaviour
         _camera_x = data.camPos[0];
         _camera_y = data.camPos[1];
 
-        for (int i = 0; i < StoryCollectibles.Count; i++)
+       /* for (int i = 0; i < StoryCollectibles.Count; i++)
         {
             StoryCollectibles[i] = data.StoryCollectibles[i];
-        }
+        }*/
     }
     public void LoadGame()
     {

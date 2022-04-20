@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class NextBiom : MonoBehaviour
 {
     public int biom;
@@ -12,7 +13,14 @@ public class NextBiom : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
-            GameManager.instance.NextBiom(biom,_camera_x,_camera_y,_player_res);
+            StartCoroutine(NextScene());
         }
+    }
+
+    private IEnumerator NextScene()
+    {
+        GameObject.Find("Curtain").GetComponent<Animator>().Play("Base Layer.FadeIn");
+        yield return new WaitForSeconds(2f);
+        GameManager.instance.NextBiom(biom, _camera_x, _camera_y, _player_res);
     }
 }

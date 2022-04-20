@@ -329,6 +329,11 @@ public class PlayerMovement : MonoBehaviour
         {
             _extraJumpsValue = _extraJumps;
         }
+        if(collision.collider.gameObject.tag == "PushingEnemy")
+        {
+            _dashBufferCounter = _dashBufferLength;
+            StartCoroutine(Dash(collision.collider.gameObject.GetComponent<Pushing>().facingLeft*-1));
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

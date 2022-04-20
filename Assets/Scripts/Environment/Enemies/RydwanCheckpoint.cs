@@ -4,20 +4,24 @@ using UnityEngine;
 
 public class RydwanCheckpoint : MonoBehaviour
 {
-    public GameObject[] RydwanWalls;
+    public GameObject[] RydwanWallsActive;
+    public GameObject[] RydwanWallsInactive;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        foreach(GameObject wall in RydwanWalls)
+        foreach(GameObject wall in RydwanWallsActive)
         {
-            wall.SetActive(true);
+            if (wall != null)
+            {
+                wall.SetActive(true);
+            }
         }
-    }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        foreach( GameObject wall in RydwanWalls)
+        foreach (GameObject wall in RydwanWallsInactive)
         {
-            wall.SetActive(false);
+            if (wall != null)
+            {
+                wall.SetActive(false);
+            }
         }
     }
 }
