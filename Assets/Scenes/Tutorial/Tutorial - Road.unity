@@ -161,7 +161,7 @@ PrefabInstance:
     - target: {fileID: 2459715630977434634, guid: de526f3172e60db44990964fc33d1bc6, type: 3}
       propertyPath: lines.Array.data[1].dialogue_text
       value: "Tego szajbusa?! Panie, na pana miejscu omija\u0142bym to miejsce szerokim
-        ruchem. Jej w\u0142a\u015Bciciel ma nier\xF3wno pod sufitem."
+        \u0142ukiem. Jej w\u0142a\u015Bciciel ma nier\xF3wno pod sufitem."
       objectReference: {fileID: 0}
     - target: {fileID: 2459715630977434634, guid: de526f3172e60db44990964fc33d1bc6, type: 3}
       propertyPath: lines.Array.data[2].dialogue_text
