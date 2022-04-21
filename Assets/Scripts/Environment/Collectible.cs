@@ -6,8 +6,8 @@ using TMPro;
 using UnityEngine.SceneManagement;
 public class Collectible : MonoBehaviour
 {
-    [SerializeField] AudioSource _audioSource;
     [SerializeField] bool _is_Collected;
+    public PlayerMovement player;
 
     //message 
     bool canInteract = false;
@@ -22,6 +22,7 @@ public class Collectible : MonoBehaviour
 
     void Start()
     {
+        player = GameObject.FindObjectOfType<PlayerMovement>();
         index = 0;
         _is_Collected = false;
     }
@@ -31,7 +32,6 @@ public class Collectible : MonoBehaviour
         if (collision.gameObject.tag == "Player" && !_is_Collected)
         {
             canInteract = true;
-            _audioSource.Play();
         }
     }
     private void Update()
@@ -62,15 +62,16 @@ public class Collectible : MonoBehaviour
     }
     private IEnumerator DisplayLine(string line)
     {
-        for (int i = 0; i < line.Length; i++)
-        {
-            text_area.text += line[i];
-            yield return new WaitForSeconds(0.03f);
-        }
+        text_area.text = line;
+        yield return new WaitForSeconds(0.1f);
         canInteract = true;
     }
     private IEnumerator EndDialogue()
     {
+        if (player != null)
+        {
+            player._MoveRes = true;
+        }
         message_background.gameObject.SetActive(false);
         collectible_Picture.gameObject.SetActive(false);
         text_area.gameObject.SetActive(false);
@@ -80,6 +81,10 @@ public class Collectible : MonoBehaviour
 
     private IEnumerator StartDialogue()
     {
+        if (player != null)
+        {
+            player._MoveRes = false;
+        }
         GetComponent<SpriteRenderer>().enabled = false;
         GetComponent<Collider2D>().enabled = false;
         _is_Collected = true;

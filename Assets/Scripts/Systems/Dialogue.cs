@@ -31,8 +31,10 @@ public class Dialogue : MonoBehaviour
     int dialogue_index;
     bool canInteract = false;
     public float showDelay;
+    public PlayerMovement player;
     void Start()
     {
+        player = GameObject.FindObjectOfType<PlayerMovement>();
         GetComponent<Image>().enabled = false;
         speaker_picture.gameObject.SetActive(false);
         text_area.gameObject.SetActive(false);
@@ -88,6 +90,10 @@ public class Dialogue : MonoBehaviour
 
     private IEnumerator StartDialogue()
     {
+        if(player !=null)
+        {
+            player._MoveRes = false;
+        }
         yield return new WaitForSeconds(showDelay);
         GetComponent<Image>().enabled = true;
         speaker_picture.gameObject.SetActive(true);
@@ -97,6 +103,10 @@ public class Dialogue : MonoBehaviour
 
     private IEnumerator EndDialogue()
     {
+        if (player != null)
+        {
+            player._MoveRes = true;
+        }
         GetComponent<Image>().enabled = false;
         speaker_picture.gameObject.SetActive(false);
         text_area.gameObject.SetActive(false);

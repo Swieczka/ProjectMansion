@@ -794,8 +794,20 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 8915856301218388063, guid: c92974e50bb57304aac6e8307b652944, type: 3}
+      propertyPath: _DashRes
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8915856301218388063, guid: c92974e50bb57304aac6e8307b652944, type: 3}
+      propertyPath: _JumpRes
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8915856301218388063, guid: c92974e50bb57304aac6e8307b652944, type: 3}
       propertyPath: _maxMoveSpeed
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8915856301218388063, guid: c92974e50bb57304aac6e8307b652944, type: 3}
+      propertyPath: _DoubleJumpRes
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8915856301218388063, guid: c92974e50bb57304aac6e8307b652944, type: 3}
       propertyPath: _maxMoveSpeedInit

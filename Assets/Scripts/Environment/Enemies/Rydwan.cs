@@ -23,7 +23,12 @@ public class Rydwan : LevelObject
     {
         if(states == RydwanStates.charging)
         {
+            GetComponent<Animator>().SetBool("isCharging", true);
             Move();
+        }
+        else
+        {
+            GetComponent<Animator>().SetBool("isCharging", false);
         }
     }
 
@@ -40,9 +45,9 @@ public class Rydwan : LevelObject
         }
         if(collision.collider.gameObject.name == "RydwanEndWall")
         {
-            states = RydwanStates.sleeping;
+          //  states = RydwanStates.sleeping;
             collision.collider.gameObject.SetActive(false);
-            gameObject.SetActive(false);
+            StartCoroutine(RydwanDies());
         }
         
     }
@@ -57,10 +62,12 @@ public class Rydwan : LevelObject
     {
         if(goLeft)
         {
+            gameObject.transform.localScale = new Vector3(-2, 2, 1);
             GetComponent<Rigidbody2D>().velocity = Vector2.left * moveSpeed;
         }
         else
         {
+            gameObject.transform.localScale = new Vector3(2, 2, 1);
             GetComponent<Rigidbody2D>().velocity = Vector2.right * moveSpeed;
         }
     }
@@ -73,5 +80,12 @@ public class Rydwan : LevelObject
     public override void ObjectReset()
     {
         
+    }
+
+    private IEnumerator RydwanDies()
+    {
+        gameObject.GetComponent<Collider2D>().enabled = false;
+        yield return new WaitForSeconds(2);
+        gameObject.SetActive(false);
     }
 }

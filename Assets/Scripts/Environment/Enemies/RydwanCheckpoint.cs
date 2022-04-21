@@ -9,18 +9,21 @@ public class RydwanCheckpoint : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        foreach(GameObject wall in RydwanWallsActive)
+        if (collision.gameObject.tag == "Player")
         {
-            if (wall != null)
+            foreach (GameObject wall in RydwanWallsActive)
             {
-                wall.SetActive(true);
+                if (wall != null)
+                {
+                    wall.SetActive(true);
+                }
             }
-        }
-        foreach (GameObject wall in RydwanWallsInactive)
-        {
-            if (wall != null)
+            foreach (GameObject wall in RydwanWallsInactive)
             {
-                wall.SetActive(false);
+                if (wall != null)
+                {
+                    wall.SetActive(false);
+                }
             }
         }
     }

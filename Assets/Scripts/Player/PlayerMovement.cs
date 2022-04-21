@@ -22,8 +22,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float _verticalDirection;
     [SerializeField] private bool _facingRight = true;
     private bool _changingDirection => (_rb.velocity.x > 0 && _horizontalDirection < 0f) || (_rb.velocity.x < 0 && _horizontalDirection > 0f);
-    
+
     [Header("Crouching & Wall Sliding Variables")]
+    private bool isCrouching;
     [SerializeField] private float _crouchSpeed = 6f;
     [SerializeField] private bool _isWallSliding;
     [SerializeField] private float _wallSlidingDrag;
@@ -32,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Jump Variables")]
     [SerializeField] private float _jumpForce = 12f;
-    private bool _canJump => Input.GetButtonDown("Jump") && ( _onGround || _extraJumpsValue > 0);
+    private bool _canJump => (Input.GetButtonDown("Jump") && ( _onGround || _extraJumpsValue > 0)) && _JumpRes && _MoveRes;
     [SerializeField] private float _airLinearDrag = 2.5f;
     [SerializeField] private float _fallMultiplier = 8f; 
     [SerializeField] private float _lowJumpFallMultiplier = 5f;
@@ -50,12 +51,18 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float _dashBufferCounter;
     [SerializeField] bool _isDashing;
     [SerializeField] bool _hasDashed;
-    bool _canDash =>  _dashBufferCounter > 0f && !_hasDashed;
+    bool _canDash =>  (_dashBufferCounter > 0f && !_hasDashed) && _DashRes && _MoveRes;
 
 
     [Header("Colliders")]
     [SerializeField] Collider2D _walkCollider;
     [SerializeField] Collider2D _slideCollider;
+
+    [Header("Restrictions")]
+    public bool _MoveRes = true;
+    public bool _JumpRes = true;
+    public bool _DashRes = true;
+    public bool _DoubleJumpRes = true;
 
     GameManager gameManager;
     Animator animator;
@@ -95,7 +102,11 @@ public class PlayerMovement : MonoBehaviour
         {
             SwitchDirection();
         }
-        Animation();
+        if(_MoveRes)
+        {
+            Animation();
+        }
+        
     }
 
     private void FixedUpdate()
@@ -106,12 +117,12 @@ public class PlayerMovement : MonoBehaviour
         {
             StartCoroutine(Dash(_horizontalDirection));
         }
-        if(!_isDashing)
+        if(!_isDashing && _MoveRes)
         {
             
             MovePlayer();
             Crouch();
-            if (_onGround)
+            if (_onGround && _DoubleJumpRes)
             {
                 _extraJumpsValue = _extraJumps;
             }
@@ -170,6 +181,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (_canCrouch)
         {
+            isCrouching = true;
             _maxMoveSpeed = _crouchSpeed;
             _slideCollider.enabled = true;
             _walkCollider.enabled = false;  
@@ -188,6 +200,7 @@ public class PlayerMovement : MonoBehaviour
             }
             if (!(_left_check || _right_check || _up_check))
             {
+                isCrouching = false;
                 _maxMoveSpeed = _maxMoveSpeedInit;
                 _slideCollider.enabled = false;
                 _walkCollider.enabled = true;
@@ -208,6 +221,7 @@ public class PlayerMovement : MonoBehaviour
         _rb.drag = 0f;
         if(_onGround)
         {
+            isCrouching = true;
             _slideCollider.enabled = true;
             _walkCollider.enabled = false;
         }
@@ -381,6 +395,14 @@ public class PlayerMovement : MonoBehaviour
         }
         if (_onGround)
         {
+            if(isCrouching)
+            {
+                animator.SetBool("isCrouching", true);
+            }
+            else
+            {
+                animator.SetBool("isCrouching", false);
+            }
             animator.SetBool("isLanding", true);
             animator.SetBool("isFalling", false);
             if (_horizontalDirection!=0)

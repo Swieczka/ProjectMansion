@@ -43,4 +43,9 @@ public class Pushing : LevelObject
             GetComponent<Rigidbody2D>().velocity = Vector2.left * moveSpeed;
         }
     }
+
+    public override void Action()
+    {
+        gameObject.SetActive(true);
+    }
 }
