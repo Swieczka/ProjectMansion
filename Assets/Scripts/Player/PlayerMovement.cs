@@ -357,6 +357,10 @@ public class PlayerMovement : MonoBehaviour
             _extraJumpsValue = 0;
             _movementBuff = 0.5f;
         }
+        if(collision.gameObject.tag =="Spikes")
+        {
+            gameManager.LoadGame();
+        }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {

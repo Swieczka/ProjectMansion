@@ -180,7 +180,7 @@ MonoBehaviour:
   _movementBuff: 1
   _maxMoveSpeed: 8
   _maxMoveSpeedInit: 8
-  _groundLinearDrag: 10
+  _groundLinearDrag: 17
   _horizontalDirection: 0
   _verticalDirection: 0
   _facingRight: 1
@@ -204,6 +204,10 @@ MonoBehaviour:
   _hasDashed: 0
   _walkCollider: {fileID: 2728857909784156446}
   _slideCollider: {fileID: 5494008054650696072}
+  _MoveRes: 1
+  _JumpRes: 1
+  _DashRes: 1
+  _DoubleJumpRes: 1
 --- !u!95 &6978923607735090218
 Animator:
   serializedVersion: 3

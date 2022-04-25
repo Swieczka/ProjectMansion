@@ -7,6 +7,8 @@ public class LaserManager : Puzzle_Manager
     [SerializeField] LevelObject[] laserObjects;
     [SerializeField] LaserEndPoint[] laserEndPoints;
     [SerializeField] ShootLaser shootlaser;
+    [SerializeField] GameObject IceZone;
+    [SerializeField] GameObject FrozenObj;
 
     void Update()
     {
@@ -32,7 +34,8 @@ public class LaserManager : Puzzle_Manager
         }
         if(check_value == laserEndPoints.Length)
         {
-            Debug.Log("dobrze");
+            IceZone.SetActive(false);
+            FrozenObj.GetComponent<LevelObject>().Action();
         }
     }
     public void UpdateLaser()
@@ -45,11 +48,13 @@ public class LaserManager : Puzzle_Manager
     }
     public override void ResetPuzzles()
     {
-        foreach(var laserobj in laserObjects)
+        IceZone.SetActive(true);
+        foreach (var laserobj in laserObjects)
         {
             laserobj.ObjectReset();
         }
         shootlaser.LaserShoot();
+
     }
 
     IEnumerator waitandshoot(float time)
@@ -63,4 +68,5 @@ public class LaserManager : Puzzle_Manager
         shootlaser.LaserShoot();
         Check();
     }
+
 }
