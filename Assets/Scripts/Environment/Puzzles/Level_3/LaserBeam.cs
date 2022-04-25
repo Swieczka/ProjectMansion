@@ -31,12 +31,12 @@ public class LaserBeam
 
     void CastRay(Vector2 pos, Vector2 dir, LineRenderer laser,GameObject parent)
     {
-         laserIndices.Add(pos);
+        laserIndices.Add(pos);
 
-         Ray2D ray = new Ray2D(pos, dir);
-         RaycastHit2D hit=Physics2D.Raycast(pos+dir,dir);
-
-         if (hit.collider.gameObject != null && hit.collider.gameObject!= parent)
+        Ray2D ray = new Ray2D(pos, dir);
+        RaycastHit2D hit=Physics2D.Raycast(pos+dir,dir,20f,LayerMask.GetMask("Laser"));
+        Debug.Log(hit.collider.gameObject.name);
+        if (hit.collider.gameObject != null && hit.collider.gameObject != parent)
          {
             laserIndices.Add(hit.point);
             UpdateLaser();
@@ -44,12 +44,20 @@ public class LaserBeam
             {
                 hit.collider.gameObject.GetComponent<LaserMirror>().ShootLaser();
             }
-         }
-         else
-         {
-             laserIndices.Add(ray.GetPoint(30));
+            else if(hit.collider.gameObject.GetComponent<LaserEndPoint>() != null)
+            {
+                hit.collider.gameObject.GetComponent<LaserEndPoint>().Action();
+            }
+            else if(hit.collider.gameObject.GetComponent<LaserDuplicator>() != null)
+            {
+                hit.collider.gameObject.GetComponent<LaserDuplicator>().Action();
+            }
+        }
+        else
+        {
+             laserIndices.Add(ray.GetPoint(10));
              UpdateLaser();
-         }
+        }
     }
 
     void UpdateLaser()
