@@ -64,7 +64,11 @@ public class LaserMirror : LaserShooterObj
     public override void ObjectReset()
     {
         Destroy(GameObject.Find("Laser Beam " + gameObject.name));
-        RotateObject(start_direction);
+        if(_interactable)
+        {
+            RotateObject(start_direction);
+        }
+        
     }
 
     void RotateObject(int direction)
