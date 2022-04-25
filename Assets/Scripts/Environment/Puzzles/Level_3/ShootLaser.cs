@@ -6,18 +6,14 @@ public class ShootLaser : MonoBehaviour
 {
     public Material material;
     LaserBeam beam;
-    void Update()
+
+    private void Start()
     {
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            Destroy(GameObject.Find("Laser Beam " + gameObject.name));
-            beam = new LaserBeam(gameObject.transform.position, transform.up*-1 , material, gameObject, gameObject.name);
-
-        }
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            Destroy(GameObject.Find("Laser Beam " + gameObject.name));
-        }
+        LaserShoot();
     }
-
+    public void LaserShoot()
+    {
+        Destroy(GameObject.Find("Laser Beam " + gameObject.name));
+        beam = new LaserBeam(gameObject.transform.position, transform.up * -1, material, gameObject, gameObject.name);
+    }
 }

@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LaserMirror : LevelObject
+public class LaserMirror : LaserShooterObj
 {
+    [SerializeField] private int start_direction;
     [SerializeField] private int direction;
     public Material material;
     [SerializeField] private bool _interactable;
     [SerializeField] private bool upDown;
-    [SerializeField] private bool all;
     LaserBeam beam;
     Vector2 dir = new Vector2();
 
@@ -16,19 +16,7 @@ public class LaserMirror : LevelObject
     {
         if(_interactable)
         {
-            gameObject.transform.eulerAngles = new Vector3(0, 0, (direction - 1) * -90);
-        }
-        
-    }
-    private void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.X))
-        {
-            Action();
-        }
-        if(Input.GetKeyDown(KeyCode.R))
-        {
-            ObjectReset();
+            RotateObject(start_direction);
         }
     }
     public override void Action()
@@ -38,8 +26,9 @@ public class LaserMirror : LevelObject
             Destroy(GameObject.Find("Laser Beam " + gameObject.name));
             direction++;
             direction %= 2;
-            gameObject.transform.eulerAngles = new Vector3(0, 0, (direction - 1) * -90);
+            RotateObject(direction);
         }
+        lasermanager.UpdateLaser();
     }
 
     public void ShootLaser()
@@ -49,10 +38,10 @@ public class LaserMirror : LevelObject
             switch (direction)
             {
                 case 1:
-                    dir = new Vector2(0, 1);
+                    dir = new Vector2(0, -1); //down
                     break;
                 case 0:
-                    dir = new Vector2(0, -1);    
+                    dir = new Vector2(0, 1); //up
                     break;
                 
             }
@@ -62,10 +51,10 @@ public class LaserMirror : LevelObject
             switch (direction)
             {
                 case 1:
-                    dir = new Vector2(-1, 0);
+                    dir = new Vector2(-1, 0); //left
                     break;
                 case 0:
-                    dir = new Vector2(1, 0);
+                    dir = new Vector2(1, 0); //right
                     break;
             }
         }
@@ -75,5 +64,18 @@ public class LaserMirror : LevelObject
     public override void ObjectReset()
     {
         Destroy(GameObject.Find("Laser Beam " + gameObject.name));
+        RotateObject(start_direction);
+    }
+
+    void RotateObject(int direction)
+    {
+        if(upDown)
+        {
+            gameObject.transform.eulerAngles = new Vector3(0, 0, (direction+1) * 90);
+        }
+        else
+        {
+            gameObject.transform.eulerAngles = new Vector3(0, 0, direction * 90);
+        }
     }
 }

@@ -2,25 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LaserEndPoint : LevelObject
+public class LaserEndPoint : LaserShooterObj
 {
-    public int index;
-    void Start()
-    {
-        
-    }
-    void Update()
-    {
-        
-    }
+    public bool _has_correct_state = false;
 
     public override void Action()
     {
-        Debug.Log("Laser activated: "+index.ToString());
+        _has_correct_state = true;
     }
 
     public override void ObjectReset()
     {
-        base.ObjectReset();
+        _has_correct_state =false;
     }
 }

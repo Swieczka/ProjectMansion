@@ -35,7 +35,6 @@ public class LaserBeam
 
         Ray2D ray = new Ray2D(pos, dir);
         RaycastHit2D hit=Physics2D.Raycast(pos+dir,dir,20f,LayerMask.GetMask("Laser"));
-        Debug.Log(hit.collider.gameObject.name);
         if (hit.collider.gameObject != null && hit.collider.gameObject != parent)
          {
             laserIndices.Add(hit.point);

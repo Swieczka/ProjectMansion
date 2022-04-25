@@ -2,18 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LaserWall : LevelObject
+public class LaserWall : LaserShooterObj
 {
-    private void Update()
+    int rot;
+    private void Start()
     {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            ObjectReset();
-        }
+        rot = 0;
     }
     public override void Action()
     {
-        gameObject.transform.eulerAngles = new Vector3(0, 0, gameObject.transform.rotation.z + 90);
+        rot++;
+        rot %= 2;
+        switch(rot)
+        {
+            case 0:
+                gameObject.transform.eulerAngles = new Vector3(0, 0, 0);
+                break;
+            case 1:
+                gameObject.transform.eulerAngles = new Vector3(0, 0, 90);
+                break;
+        }
+        lasermanager.UpdateLaser();
     }
 
     public override void ObjectReset()
