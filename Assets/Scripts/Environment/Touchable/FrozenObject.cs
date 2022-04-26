@@ -18,7 +18,7 @@ public class FrozenObject : LevelObject
 
     public override void Action()
     {
-        _canMove = true;
+        _canMove = !_canMove;
     }
 
     public override void ObjectReset()

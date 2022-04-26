@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float _maxMoveSpeed;
     [SerializeField] private float _maxMoveSpeedInit;
     [SerializeField] private float _groundLinearDrag;
+    [SerializeField] private float _groundLinearDragTemp = 0;
     [SerializeField] private float _horizontalDirection;
     [SerializeField] private float _verticalDirection;
     [SerializeField] private bool _facingRight = true;
@@ -361,7 +362,30 @@ public class PlayerMovement : MonoBehaviour
         {
             gameManager.LoadGame();
         }
+        if(collision.gameObject.tag == "Icy")
+        {
+            _groundLinearDragTemp = _groundLinearDrag;
+            _groundLinearDrag = 1;
+        }
     }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "IcyDead")
+        {
+            _extraJumps = 0;
+            _extraJumpsValue = 0;
+            _movementBuff -= 0.01f;
+            GetComponent<SpriteRenderer>().color -= new Color(0.02f, 0.01f,0,0);
+            if (_movementBuff <= 0f)
+            {
+                GetComponent<SpriteRenderer>().color = Color.white;
+                _movementBuff = 1;
+                gameManager.LoadGame();
+            }
+        }
+    }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Web")
@@ -369,7 +393,17 @@ public class PlayerMovement : MonoBehaviour
             _extraJumps = 1;
             _movementBuff = 1f;
         }
-        
+        if (collision.gameObject.tag == "Icy")
+        {
+            _groundLinearDrag = _groundLinearDragTemp;
+          
+        }
+        if (collision.gameObject.tag == "IcyDead")
+        {
+                GetComponent<SpriteRenderer>().color = Color.white;
+                _movementBuff = 1;
+        }
+
     }
     private void SwitchDirection()
     {

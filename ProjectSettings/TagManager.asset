@@ -12,6 +12,8 @@ TagManager:
   - LaserMirror
   - Laser
   - PushingEnemy
+  - Icy
+  - IcyDead
   layers:
   - Default
   - TransparentFX

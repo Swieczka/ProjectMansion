@@ -37,6 +37,10 @@ public class LaserManager : Puzzle_Manager
             IceZone.SetActive(false);
             FrozenObj.GetComponent<LevelObject>().Action();
         }
+        else
+        {
+            IceZone.SetActive(true);
+        }
     }
     public void UpdateLaser()
     {
