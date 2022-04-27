@@ -14,6 +14,7 @@ TagManager:
   - PushingEnemy
   - Icy
   - IcyDead
+  - Ground
   layers:
   - Default
   - TransparentFX

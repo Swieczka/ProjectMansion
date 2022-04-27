@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class JumpingEnemies : MonoBehaviour
 {
-    // Start is called before the first frame update
     void Start()
     {
-        
+        Jump();  
     }
 
-    // Update is called once per frame
-    void Update()
+    void Jump()
     {
-        
+        GetComponent<Rigidbody2D>().AddForce(Vector2.up * 10, ForceMode2D.Impulse);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.gameObject.tag == "Ground")
+        {
+            Jump();
+        }
     }
 }
