@@ -15,6 +15,7 @@ TagManager:
   - Icy
   - IcyDead
   - Ground
+  - Pressable
   layers:
   - Default
   - TransparentFX
