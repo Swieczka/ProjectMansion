@@ -26,4 +26,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Corridor.unity
     guid: 0bfadc9a19438ee468c73396c70271e1
+  - enabled: 1
+    path: Assets/Scenes/Epilogue - Attic.unity
+    guid: 0ce68765f385b2c488c9fa1a12759666
+  - enabled: 1
+    path: Assets/Scenes/Epilogue - Office.unity
+    guid: aafe9b88edf88444cb05398c425992f2
+  - enabled: 1
+    path: Assets/Scenes/Epilog-Garden.unity
+    guid: 191b1249f88e9ff49a4a94c7ff41a104
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: de39501b197969044abdc9f16d263e37
   m_configObjects: {}
