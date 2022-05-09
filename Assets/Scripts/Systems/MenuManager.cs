@@ -41,4 +41,9 @@ public class MenuManager : MonoBehaviour
         Time.timeScale = 1.0f;
         x.SetActive(false);
     }
+
+    public void GoToScene(int num)
+    {
+        SceneManager.LoadScene(num);
+    }
 }

@@ -6,7 +6,6 @@ public class Pipe : Puzzle
 {
     [SerializeField] private int alt_correct_state;
     [SerializeField] private int start_state;
-    [SerializeField] private int number;
     void Start()
     {
         gameObject.transform.eulerAngles = new Vector3(0, 0, start_state*-90);
@@ -15,25 +14,6 @@ public class Pipe : Puzzle
         PuzzleCheck();
     }
 
-    void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.Alpha1) && number==1)
-        {
-            Action();
-        }
-        if(Input.GetKeyDown(KeyCode.Alpha2) && number==2)
-        {
-            Action();
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha3) && number == 3)
-        {
-            Action();
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha4) && number == 4)
-        {
-            Action();
-        }
-    }
     protected override void PuzzleCheck()
     {
         int state = _state % 4;

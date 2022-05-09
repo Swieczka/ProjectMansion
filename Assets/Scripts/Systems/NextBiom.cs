@@ -9,14 +9,31 @@ public class NextBiom : MonoBehaviour
     public float _camera_x;
     public float _camera_y;
     public Vector3 _player_res;
+
+    bool isPlayerNearby = false;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "Player")
         {
-            StartCoroutine(NextScene());
+            isPlayerNearby = true;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            isPlayerNearby = false;
         }
     }
 
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.E) && isPlayerNearby)
+        {
+            StartCoroutine(NextScene());
+        }
+        
+    }
     private IEnumerator NextScene()
     {
         GameObject.Find("Curtain").GetComponent<Animator>().Play("Base Layer.FadeIn");
