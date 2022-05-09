@@ -27,6 +27,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Corridor.unity
     guid: 0bfadc9a19438ee468c73396c70271e1
   - enabled: 1
+    path: Assets/Scenes/Kitchen.unity
+    guid: 874a4c6c2946f8c42b9135abe73beba8
+  - enabled: 1
     path: Assets/Scenes/Epilogue - Attic.unity
     guid: 0ce68765f385b2c488c9fa1a12759666
   - enabled: 1
