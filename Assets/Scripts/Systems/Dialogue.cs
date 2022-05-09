@@ -30,6 +30,7 @@ public class Dialogue : MonoBehaviour
     public bool NextSceneAfter = false;
     int dialogue_index;
     bool canInteract = false;
+    bool canSkip = false;
     public float showDelay;
     public PlayerMovement player;
     void Start()
@@ -49,6 +50,13 @@ public class Dialogue : MonoBehaviour
         {
             canInteract = false;
             UpdateDialogue();
+            canSkip = true;
+        }
+        else if(Input.GetKeyDown(KeyCode.E) && canSkip)
+        {
+            StopAllCoroutines();
+            canSkip = false;
+            DisplayLinesQuick(lines[dialogue_index-1].dialogue_text);
         }
     }
 
@@ -87,7 +95,11 @@ public class Dialogue : MonoBehaviour
         }
         canInteract = true;
     }
-
+    private void DisplayLinesQuick(string line)
+    {
+        text_area.text = line;
+        canInteract = true;
+    }
     private IEnumerator StartDialogue()
     {
         if(player !=null)

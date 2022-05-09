@@ -5,7 +5,7 @@ using UnityEngine;
 public class PipeManager : Puzzle_Manager
 {
     [SerializeField] Pipe[] pipes;
-
+    [SerializeField] PipeFinish GateToActivate; 
     public override void Check()
     {
         int correct_counter = 0;
@@ -18,7 +18,11 @@ public class PipeManager : Puzzle_Manager
         }
         if (correct_counter == pipes.Length)
         {
-            Debug.Log("Dobrze!");
+            GateToActivate.Action(true);
+        }
+        else
+        {
+            GateToActivate.Action(false); 
         }
     }
 
@@ -29,4 +33,6 @@ public class PipeManager : Puzzle_Manager
             pipe.ObjectReset();
         }
     }
+
+    
 }

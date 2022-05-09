@@ -14,10 +14,12 @@ public class Plate : Interactable
     {
         if (!PlateContent.activeSelf)
         {
+            GameManager.instance.LockMovement(true);
             PlateContent.SetActive(true);
         }
         else
         {
+            GameManager.instance.LockMovement(false);
             PlateContent.SetActive(false);
         }
     }

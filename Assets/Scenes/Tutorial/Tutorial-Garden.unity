@@ -41612,6 +41612,7 @@ MonoBehaviour:
   _camera_x: -32
   _camera_y: 0
   _player_res: {x: -36, y: 4, z: 0}
+  isInteractable: 0
 --- !u!4 &1606258412
 Transform:
   m_ObjectHideFlags: 0
@@ -42181,11 +42182,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8705779256549916849, guid: 448af6279d331e14dbd31e46fdf09bcd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 49.25
+      value: 82
       objectReference: {fileID: 0}
     - target: {fileID: 8705779256549916849, guid: 448af6279d331e14dbd31e46fdf09bcd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 13.450001
+      value: 11.950001
       objectReference: {fileID: 0}
     - target: {fileID: 8705779256549916849, guid: 448af6279d331e14dbd31e46fdf09bcd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -54204,11 +54205,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8705779256549916849, guid: 448af6279d331e14dbd31e46fdf09bcd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 41.903
+      value: 102.06
       objectReference: {fileID: 0}
     - target: {fileID: 8705779256549916849, guid: 448af6279d331e14dbd31e46fdf09bcd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 26.453
+      value: 24.453
       objectReference: {fileID: 0}
     - target: {fileID: 8705779256549916849, guid: 448af6279d331e14dbd31e46fdf09bcd, type: 3}
       propertyPath: m_LocalPosition.z

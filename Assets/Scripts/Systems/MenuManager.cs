@@ -6,6 +6,16 @@ using UnityEngine.SceneManagement;
 public class MenuManager : MonoBehaviour
 {
     public bool stay;
+    [System.Serializable]
+    public class StartBiomsPositions
+    {
+        public int BiomIndex;
+        public float _camera_x;
+        public float _camera_y;
+        public Vector3 _player_respawn_position;
+    }
+
+    public List<StartBiomsPositions> _startBiomsPositions;
     private void Awake()
     {
         if(stay)
@@ -44,6 +54,16 @@ public class MenuManager : MonoBehaviour
 
     public void GoToScene(int num)
     {
-        SceneManager.LoadScene(num);
+        StartBiomsPositions biom = _startBiomsPositions[num];
+        GameManager.instance.NextBiom(biom.BiomIndex, biom._camera_x, biom._camera_y, biom._player_respawn_position);
+    }
+    public void GoToScene(string name)
+    {
+        SceneManager.LoadScene(name);
+    }
+
+    public void ShowCanvas(GameObject canvas)
+    {
+        canvas.SetActive(!canvas.activeSelf);
     }
 }

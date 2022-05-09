@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public Vector3 _player_respawn_position;
 
     public List<bool> StoryCollectibles = new List<bool>();
+    
     private void Awake()
     {
         
@@ -152,5 +153,10 @@ public class GameManager : MonoBehaviour
         {
             levelObject.ObjectReset();
         }
+    }
+
+    public void LockMovement(bool _lock)
+    {
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>()._MoveRes = !_lock;
     }
 }
