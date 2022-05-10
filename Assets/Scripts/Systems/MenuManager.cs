@@ -14,17 +14,27 @@ public class MenuManager : MonoBehaviour
         public float _camera_y;
         public Vector3 _player_respawn_position;
     }
-
+    public static MenuManager Instance;
     public List<StartBiomsPositions> _startBiomsPositions;
     private void Awake()
     {
         if(stay)
         {
-            DontDestroyOnLoad(gameObject);
             gameObject.SetActive(false);
+            if (Instance != null)
+            {
+                Destroy(gameObject);
+            }
+            else
+            {
+                Instance = this;
+            }
+            DontDestroyOnLoad(gameObject);
+            
         }
         
     }
+    
     public void StartNewGame()
     {
         GameManager.instance.RestartStats();

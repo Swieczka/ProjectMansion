@@ -11,7 +11,12 @@ public class PressurePLate : LevelObject
         GetComponent<Animator>().PlayInFixedTime("Base Layer.Pressed");
         if (collision.gameObject.tag == "Player" || collision.gameObject.GetComponent<LevelObject>() != null || collision.gameObject.tag == "Pressable")
         {
+            if(GetComponent<AudioSource>() != null)
+            {
+                GetComponent<AudioSource>().Play();
+            }
             Action();
+            
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
