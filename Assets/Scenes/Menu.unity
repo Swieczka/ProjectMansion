@@ -2858,10 +2858,10 @@ MonoBehaviour:
     _camera_y: 0
     _player_respawn_position: {x: -13, y: -3, z: 0}
   - BiomIndex: 7
-    _camera_x: -13.5
-    _camera_y: 0.25
-    _player_respawn_position: {x: -13, y: -1, z: 0}
-  - BiomIndex: 9
+    _camera_x: -31
+    _camera_y: 0
+    _player_respawn_position: {x: -45, y: 6, z: 0}
+  - BiomIndex: 10
     _camera_x: 95
     _camera_y: 53
     _player_respawn_position: {x: 108.5, y: 59, z: 0}

@@ -68389,19 +68389,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6440899561591723365, guid: 77bad32fd3ecb71429b437a7d7d15457, type: 3}
       propertyPath: _camera_x
-      value: -13.5
+      value: -31
       objectReference: {fileID: 0}
     - target: {fileID: 6440899561591723365, guid: 77bad32fd3ecb71429b437a7d7d15457, type: 3}
       propertyPath: _camera_y
-      value: 0.25
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6440899561591723365, guid: 77bad32fd3ecb71429b437a7d7d15457, type: 3}
       propertyPath: _player_res.x
-      value: -13
+      value: -45
       objectReference: {fileID: 0}
     - target: {fileID: 6440899561591723365, guid: 77bad32fd3ecb71429b437a7d7d15457, type: 3}
       propertyPath: _player_res.y
-      value: -1
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77bad32fd3ecb71429b437a7d7d15457, type: 3}
