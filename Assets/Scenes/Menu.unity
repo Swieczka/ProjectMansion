@@ -2852,7 +2852,7 @@ MonoBehaviour:
   - BiomIndex: 5
     _camera_x: -32
     _camera_y: 0
-    _player_respawn_position: {x: -36, y: 4, z: 0}
+    _player_respawn_position: {x: -40.5, y: 30, z: 0}
   - BiomIndex: 6
     _camera_x: 0
     _camera_y: 0

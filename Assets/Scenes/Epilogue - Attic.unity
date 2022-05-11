@@ -2651,6 +2651,10 @@ PrefabInstance:
       value: NextBiom
       objectReference: {fileID: 0}
     - target: {fileID: 6440899561591723365, guid: 77bad32fd3ecb71429b437a7d7d15457, type: 3}
+      propertyPath: biom
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6440899561591723365, guid: 77bad32fd3ecb71429b437a7d7d15457, type: 3}
       propertyPath: _camera_x
       value: 95
       objectReference: {fileID: 0}

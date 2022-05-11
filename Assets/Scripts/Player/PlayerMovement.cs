@@ -64,6 +64,7 @@ public class PlayerMovement : MonoBehaviour
     public bool _JumpRes = true;
     public bool _DashRes = true;
     public bool _DoubleJumpRes = true;
+    public bool CutScene;
 
     GameManager gameManager;
     Animator animator;
@@ -79,9 +80,10 @@ public class PlayerMovement : MonoBehaviour
         _maxMoveSpeedInit = _maxMoveSpeed;
         _rb= GetComponent<Rigidbody2D>();
     }
-
+     
     void Update()
     {
+        
         _horizontalDirection = GetInput().x;
         _verticalDirection = GetInput().y;
         
@@ -107,7 +109,17 @@ public class PlayerMovement : MonoBehaviour
         {
             Animation();
         }
-        
+        if (CutScene)
+        {
+            animator.Play("Base Layer.Idle");
+            animator.SetBool("isJumping", false);
+            animator.SetBool("isRunning", false);
+            animator.SetBool("isLanding", false);
+            animator.SetBool("isFalling", false);
+            animator.SetBool("isCrouching", false);
+            _rb.drag = 100f;
+        }
+
     }
 
     private void FixedUpdate()
@@ -456,5 +468,6 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetBool("isLanding", false);
         }
+        
     }
 }

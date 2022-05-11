@@ -11,7 +11,8 @@ public class ChangePlayerState : MonoBehaviour
         move,
         jump,
         d_jump,
-        dash
+        dash,
+        all
     }
     public playerRestrictions _playerRestrictions;
     private void OnTriggerEnter2D(Collider2D collision)
@@ -31,6 +32,12 @@ public class ChangePlayerState : MonoBehaviour
                     player._DoubleJumpRes = playerResAfterCollide;
                     break;
                 case playerRestrictions.dash:
+                    player._DashRes = playerResAfterCollide;
+                    break;
+                case playerRestrictions.all:
+                    player._MoveRes = playerResAfterCollide;
+                    player._JumpRes = playerResAfterCollide;
+                    player._DoubleJumpRes = playerResAfterCollide;
                     player._DashRes = playerResAfterCollide;
                     break;
             }

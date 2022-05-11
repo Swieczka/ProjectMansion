@@ -41631,7 +41631,7 @@ MonoBehaviour:
   biom: 5
   _camera_x: -32
   _camera_y: 0
-  _player_res: {x: -36, y: 4, z: 0}
+  _player_res: {x: -40.5, y: 30, z: 0}
   isInteractable: 0
 --- !u!4 &1606258412
 Transform:

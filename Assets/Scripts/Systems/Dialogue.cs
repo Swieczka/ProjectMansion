@@ -105,6 +105,7 @@ public class Dialogue : MonoBehaviour
         if(player !=null)
         {
             player._MoveRes = false;
+            player.CutScene = true;
         }
         yield return new WaitForSeconds(showDelay);
         GetComponent<Image>().enabled = true;
@@ -118,6 +119,7 @@ public class Dialogue : MonoBehaviour
         if (player != null)
         {
             player._MoveRes = true;
+            player.CutScene = false;
         }
         GetComponent<Image>().enabled = false;
         speaker_picture.gameObject.SetActive(false);
