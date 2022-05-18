@@ -5,8 +5,13 @@ using UnityEngine;
 public class Carpet : LevelObject
 {
     [SerializeField] Vector3 startPos;
+    [SerializeField] Vector3 spawnPos;
     [SerializeField] Vector3 endPos;
     bool IsMoving = false;
+    private void Awake()
+    {
+        spawnPos = endPos;
+    }
     public override void Action()
     {
         Vector3 tempPos = startPos;
@@ -45,5 +50,10 @@ public class Carpet : LevelObject
     private void OnDrawGizmos()
     {
         Gizmos.DrawLine(startPos, endPos);
+    }
+
+    public override void ObjectReset()
+    {
+        gameObject.transform.position = spawnPos;
     }
 }

@@ -42,12 +42,12 @@ public class Painting : Puzzle
 
     public override void ResetPuzzle()
     {
-        ObjectReset();
+        gameObject.transform.position = objectPos;
+        GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
     }
 
     public override void ObjectReset()
     {
-        gameObject.transform.position = objectPos;
-        GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+        
     }
 }

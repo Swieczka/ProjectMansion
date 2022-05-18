@@ -71,6 +71,7 @@ public class Collectible : MonoBehaviour
         if (player != null)
         {
             player._MoveRes = true;
+            player.CutScene = false;
         }
         message_background.gameObject.SetActive(false);
         collectible_Picture.gameObject.SetActive(false);
@@ -84,6 +85,7 @@ public class Collectible : MonoBehaviour
         if (player != null)
         {
             player._MoveRes = false;
+            player.CutScene = true;
         }
         GetComponent<SpriteRenderer>().enabled = false;
         GetComponent<Collider2D>().enabled = false;
