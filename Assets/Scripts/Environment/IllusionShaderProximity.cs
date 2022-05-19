@@ -20,16 +20,37 @@ public class IllusionShaderProximity : MonoBehaviour
         StartCoroutine(IllusionFadeAway());
     }
 
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        StartCoroutine(IllusionFadeIn());
+    }
+
     private IEnumerator IllusionFadeAway()
     {
         while (material.GetFloat("Distortion") < 1)
         {
-           material.SetFloat("Distortion", material.GetFloat("Distortion") + Time.deltaTime * 0.1f);
+           material.SetFloat("Distortion", material.GetFloat("Distortion") + Time.deltaTime);
+            yield return null;
         }
         while (material.GetFloat("DistortionScale") > 0)
         {
-            material.SetFloat("DistortionScale", material.GetFloat("DistortionScale") - Time.deltaTime * 0.1f);
+            material.SetFloat("DistortionScale", material.GetFloat("DistortionScale") - Time.deltaTime * 10f);
+            yield return null;
         }
-        yield return null;
+        
+    }
+
+    private IEnumerator IllusionFadeIn()
+    {
+        while (material.GetFloat("Distortion") > distortion)
+        {
+            material.SetFloat("Distortion", material.GetFloat("Distortion") - Time.deltaTime);
+            yield return null;
+        }
+        while (material.GetFloat("DistortionScale") < distortionScale)
+        {
+            material.SetFloat("DistortionScale", material.GetFloat("DistortionScale") + Time.deltaTime * 10f);
+            yield return null;
+        }
     }
 }
