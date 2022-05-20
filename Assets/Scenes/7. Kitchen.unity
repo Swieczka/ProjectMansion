@@ -625,7 +625,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.5361643, y: 0}
+  m_Offset: {x: 0.71782255, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -636,7 +636,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 8.963881, y: 1}
+  m_Size: {x: 13.959472, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &101312658
 MonoBehaviour:
@@ -41409,7 +41409,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.5361643, y: 0}
+  m_Offset: {x: 0.6724036, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -41420,7 +41420,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 8.963881, y: 1}
+  m_Size: {x: 14.504438, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &349663661
 MonoBehaviour:
@@ -58543,7 +58543,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.5361643, y: 0}
+  m_Offset: {x: 0.8313589, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -58554,7 +58554,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 8.963881, y: 1}
+  m_Size: {x: 15.094835, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &1620289912
 MonoBehaviour:
@@ -58898,7 +58898,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.5361643, y: 0}
+  m_Offset: {x: 2.4208646, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -58909,7 +58909,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 8.963881, y: 1}
+  m_Size: {x: 13.369071, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &1645446701
 MonoBehaviour:
@@ -78808,6 +78808,10 @@ PrefabInstance:
     - target: {fileID: 3814654781697252379, guid: ad703785c15791845a246b35417f5b86, type: 3}
       propertyPath: m_Name
       value: EnemyMoving
+      objectReference: {fileID: 0}
+    - target: {fileID: 3814654781697252379, guid: ad703785c15791845a246b35417f5b86, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad703785c15791845a246b35417f5b86, type: 3}

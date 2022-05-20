@@ -68838,15 +68838,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2459715630977434634, guid: de526f3172e60db44990964fc33d1bc6, type: 3}
       propertyPath: lines.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2459715630977434634, guid: de526f3172e60db44990964fc33d1bc6, type: 3}
+      propertyPath: personPictures.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2459715630977434634, guid: de526f3172e60db44990964fc33d1bc6, type: 3}
+      propertyPath: personPictures.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 084123421f6c9fa429487e8e5e300d9a, type: 3}
+    - target: {fileID: 2459715630977434634, guid: de526f3172e60db44990964fc33d1bc6, type: 3}
       propertyPath: lines.Array.data[0].dialogue_text
-      value: "Informacja uzupe\u0142niaj\u0105ca: <i>*Gracz wskoczy\u0142 przez okno
-        do rezydencji. Wykona\u0142 kilka krok\xF3w, nast\u0105pi\u0142 na zbutwia\u0142e
-        deski, po czym wraz z nimi run\u0105\u0142 do piwnicy. Podczas upadku uderzy\u0142
-        si\u0119 w g\u0142ow\u0119 \u2013 obraz ciemnieje. Po kr\xF3tkiej chwili
-        ponownie si\u0119 rozja\u015Bnia*</i>"
+      value: "Moja g\u0142owa... Gdzie ja... Ach tak, piwnica. Musz\u0119 znale\u017A\u0107
+        jak\u0105\u015B drabin\u0119 lub schody i wr\xF3ci\u0107 na g\xF3r\u0119...\n\n...tylko
+        strasznie tu ciemno. Gdzie\u015B powinien by\u0107 w\u0142\u0105cznik."
       objectReference: {fileID: 0}
     - target: {fileID: 2459715630977434634, guid: de526f3172e60db44990964fc33d1bc6, type: 3}
       propertyPath: lines.Array.data[1].dialogue_text
