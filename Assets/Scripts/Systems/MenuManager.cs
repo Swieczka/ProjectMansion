@@ -74,6 +74,15 @@ public class MenuManager : MonoBehaviour
 
     public void ShowCanvas(GameObject canvas)
     {
-        canvas.SetActive(!canvas.activeSelf);
+        canvas.SetActive(true);
+    }
+    public void HideCanvas(GameObject canvas)
+    {
+        canvas.SetActive(false);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }
