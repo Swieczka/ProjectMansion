@@ -223,6 +223,103 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1001 &43542369
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 932682648389489162, guid: 77bad32fd3ecb71429b437a7d7d15457, type: 3}
+      propertyPath: m_Size.x
+      value: 1.3190861
+      objectReference: {fileID: 0}
+    - target: {fileID: 932682648389489162, guid: 77bad32fd3ecb71429b437a7d7d15457, type: 3}
+      propertyPath: m_Size.y
+      value: 3.5065107
+      objectReference: {fileID: 0}
+    - target: {fileID: 932682648389489162, guid: 77bad32fd3ecb71429b437a7d7d15457, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.051142693
+      objectReference: {fileID: 0}
+    - target: {fileID: 932682648389489162, guid: 77bad32fd3ecb71429b437a7d7d15457, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.03415346
+      objectReference: {fileID: 0}
+    - target: {fileID: 937997679470065598, guid: 77bad32fd3ecb71429b437a7d7d15457, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 937997679470065598, guid: 77bad32fd3ecb71429b437a7d7d15457, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 937997679470065598, guid: 77bad32fd3ecb71429b437a7d7d15457, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 937997679470065598, guid: 77bad32fd3ecb71429b437a7d7d15457, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 937997679470065598, guid: 77bad32fd3ecb71429b437a7d7d15457, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 937997679470065598, guid: 77bad32fd3ecb71429b437a7d7d15457, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 937997679470065598, guid: 77bad32fd3ecb71429b437a7d7d15457, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 937997679470065598, guid: 77bad32fd3ecb71429b437a7d7d15457, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 937997679470065598, guid: 77bad32fd3ecb71429b437a7d7d15457, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 937997679470065598, guid: 77bad32fd3ecb71429b437a7d7d15457, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 937997679470065598, guid: 77bad32fd3ecb71429b437a7d7d15457, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5931221504053305232, guid: 77bad32fd3ecb71429b437a7d7d15457, type: 3}
+      propertyPath: m_Name
+      value: NextBiom_office
+      objectReference: {fileID: 0}
+    - target: {fileID: 6440899561591723365, guid: 77bad32fd3ecb71429b437a7d7d15457, type: 3}
+      propertyPath: biom
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6440899561591723365, guid: 77bad32fd3ecb71429b437a7d7d15457, type: 3}
+      propertyPath: _camera_x
+      value: -13.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6440899561591723365, guid: 77bad32fd3ecb71429b437a7d7d15457, type: 3}
+      propertyPath: _camera_y
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6440899561591723365, guid: 77bad32fd3ecb71429b437a7d7d15457, type: 3}
+      propertyPath: _player_res.x
+      value: -18
+      objectReference: {fileID: 0}
+    - target: {fileID: 6440899561591723365, guid: 77bad32fd3ecb71429b437a7d7d15457, type: 3}
+      propertyPath: _player_res.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6440899561591723365, guid: 77bad32fd3ecb71429b437a7d7d15457, type: 3}
+      propertyPath: isInteractable
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 77bad32fd3ecb71429b437a7d7d15457, type: 3}
 --- !u!1 &89073695
 GameObject:
   m_ObjectHideFlags: 0
@@ -2648,7 +2745,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5931221504053305232, guid: 77bad32fd3ecb71429b437a7d7d15457, type: 3}
       propertyPath: m_Name
-      value: NextBiom
+      value: NextBiom_Garden
       objectReference: {fileID: 0}
     - target: {fileID: 6440899561591723365, guid: 77bad32fd3ecb71429b437a7d7d15457, type: 3}
       propertyPath: biom

@@ -2,17 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MushroomJump : MonoBehaviour
+public class MushroomJump : Touchable
 {
-    // Start is called before the first frame update
-    void Start()
+    public float _jumpForce;
+    public override void Action()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Rigidbody2D _rb = playerObj.GetComponent<Rigidbody2D>();
+        _rb.velocity = new Vector2(_rb.velocity.x, 0f);
+        _rb.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
+        playerObj.GetComponent<Animator>().Play("Base Layer.Jump Start");
     }
 }
