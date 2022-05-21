@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: KitchenIllusion2
+  m_Name: KitchenIllusion2b
   m_Shader: {fileID: -6465566751694194690, guid: b52a7cd55afd0cd419f0ce9052cd3b6a, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -51,6 +51,7 @@ Material:
     m_Floats:
     - Distortion: 0.1
     - DistortionScale: 100
+    - Opacity: 1
     m_Colors:
     - DistortionSpeed: {r: 0.1, g: 0.25, b: 0, a: 0}
   m_BuildTextureStacks: []
