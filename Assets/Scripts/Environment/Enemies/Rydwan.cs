@@ -85,6 +85,7 @@ public class Rydwan : LevelObject
     private IEnumerator RydwanDies()
     {
         gameObject.GetComponent<Collider2D>().enabled = false;
+        GetComponent<RydwanAudio>().RydwanDies();
         yield return new WaitForSeconds(2);
         gameObject.SetActive(false);
     }

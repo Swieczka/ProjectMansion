@@ -6,13 +6,18 @@ public class RydwanAudio : MonoBehaviour
 {
     public AudioClip musicSleeping;
     public AudioClip musicCharging;
-    private AudioSource audioPlayer;
+    [SerializeField] private AudioSource audioPlayer;
     private Rydwan rydwan;
 
     private void Start()
     {
-        audioPlayer = GetComponent<AudioSource>();
         rydwan = GetComponent<Rydwan>();
+    }
+
+    public void RydwanDies()
+    {
+        audioPlayer.clip = musicSleeping;
+        if (!audioPlayer.isPlaying) audioPlayer.Play();
     }
 
     private void Update()
