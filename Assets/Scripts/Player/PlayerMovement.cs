@@ -379,6 +379,10 @@ public class PlayerMovement : MonoBehaviour
             _groundLinearDragTemp = _groundLinearDrag;
             _groundLinearDrag = 1;
         }
+        if (collision.gameObject.tag == "JumpWall")
+        {
+            _extraJumpsValue = _extraJumps;
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)

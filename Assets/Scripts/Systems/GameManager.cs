@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Experimental.Rendering.Universal;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class GameManager : MonoBehaviour
     public Vector3 _player_respawn_position;
 
     public List<bool> StoryCollectibles = new List<bool>();
-    
+    public Light2D lightScreen;
     private void Awake()
     {
         
@@ -27,10 +28,11 @@ public class GameManager : MonoBehaviour
             instance = this; 
         }
         DontDestroyOnLoad(gameObject);
-        
+
     }
     void Start()
     {
+        
         Scene currScene = SceneManager.GetActiveScene();
         if (currScene.buildIndex != 0)
         {
@@ -40,18 +42,24 @@ public class GameManager : MonoBehaviour
         {
             LoadInMenu();
         }
+        LightIntensity();
     }
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.F5))
+        
+        if(Input.GetKeyDown(KeyCode.U))
         {
-            SaveGame();
+            Screen.brightness = 0f;
         }
-        if (Input.GetKeyDown(KeyCode.F9))
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            Screen.brightness = 1f;
+        }
+        if (Input.GetKeyDown(KeyCode.R))
         {
             LoadGame();
         }
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if(Input.GetKeyDown(KeyCode.Escape) && SceneManager.GetActiveScene().buildIndex != 0)
         {
             if(pauseMenu.activeInHierarchy)
             {
@@ -158,5 +166,15 @@ public class GameManager : MonoBehaviour
     public void LockMovement(bool _lock)
     {
         GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>()._MoveRes = !_lock;
+    }
+
+    public void LightIntensity()
+    {
+        lightScreen.intensity = PlayerPrefs.GetFloat("Light");
+    }
+
+    public void SoundVolume()
+    {
+        AudioListener.volume = PlayerPrefs.GetFloat("Sound", 1);
     }
 }

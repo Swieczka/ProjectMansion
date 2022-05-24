@@ -17,7 +17,7 @@ public class PaintingManager : Puzzle_Manager
             {
                 correct_counter++;
             }
-            if (correct_counter == 6)
+            if (correct_counter == 4)
             {
                 Gate.GetComponent<Animator>().Play("Base Layer.Open");
                 Debug.Log("Dobrze!");

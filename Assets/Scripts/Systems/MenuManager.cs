@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
 {
@@ -84,5 +85,17 @@ public class MenuManager : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void ChangeBrightness()
+    {
+        PlayerPrefs.SetFloat("Light",GetComponent<Slider>().value);
+        GameManager.instance.LightIntensity();
+    }
+
+    public void ChangeVolume()
+    {
+        PlayerPrefs.SetFloat("Sound", GetComponent<Slider>().value);
+        GameManager.instance.SoundVolume();
     }
 }

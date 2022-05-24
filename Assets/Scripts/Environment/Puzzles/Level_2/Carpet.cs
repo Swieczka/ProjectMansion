@@ -54,6 +54,6 @@ public class Carpet : LevelObject
 
     public override void ObjectReset()
     {
-        gameObject.transform.position = spawnPos;
+       // gameObject.transform.position = spawnPos;
     }
 }
