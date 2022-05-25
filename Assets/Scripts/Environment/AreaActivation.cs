@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class AreaActivation : LevelObject
-{
+{ 
     [SerializeField] GameObject _gameObjecttoInteract;
     private void OnTriggerEnter2D(Collider2D collision)
     {

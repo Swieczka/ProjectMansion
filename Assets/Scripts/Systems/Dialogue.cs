@@ -28,9 +28,10 @@ public class Dialogue : MonoBehaviour
     public TextMeshProUGUI text_area;
 
     public bool NextSceneAfter = false;
-    int dialogue_index;
-    bool canInteract = false;
-    bool canSkip = false;
+    public int dialogue_index;
+    public int skip_index;
+    public bool canInteract = true;
+    public bool canSkip = true;
     public float showDelay;
     public PlayerMovement player;
     void Start()
@@ -41,6 +42,8 @@ public class Dialogue : MonoBehaviour
         text_area.gameObject.SetActive(false);
         text_area.text = "";
         dialogue_index = 0;
+        canSkip = true;
+    skip_index = 0;
         StartCoroutine(StartDialogue());
     }
 
@@ -48,15 +51,17 @@ public class Dialogue : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.E) && canInteract)
         {
-            canInteract = false;
-            UpdateDialogue();
             canSkip = true;
+            canInteract = false;
+            
+            UpdateDialogue();
+            
         }
         else if(Input.GetKeyDown(KeyCode.E) && canSkip)
         {
             StopAllCoroutines();
+            DisplayLinesQuick(lines[skip_index].dialogue_text);
             canSkip = false;
-            DisplayLinesQuick(lines[dialogue_index-1].dialogue_text);
         }
     }
 
@@ -81,6 +86,7 @@ public class Dialogue : MonoBehaviour
                     speaker_picture.sprite = personPictures[2];
                     break;
             }
+            skip_index = dialogue_index;
             StartCoroutine(DisplayLine(lines[dialogue_index].dialogue_text));
             dialogue_index++;
         }

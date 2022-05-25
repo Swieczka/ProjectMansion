@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Checkpoint : MonoBehaviour
 {
+     
     GameManager gameManager;
     [SerializeField] private float _cam_x;
     [SerializeField] private float _cam_y;

@@ -361,7 +361,7 @@ public class PlayerMovement : MonoBehaviour
             _dashBufferCounter = _dashBufferLength;
             StartCoroutine(Dash(collision.collider.gameObject.GetComponent<Pushing>().facingLeft*-1));
         }
-    }
+    } 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.tag =="Web")
@@ -417,9 +417,11 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.tag == "IcyDead")
         {
                 GetComponent<SpriteRenderer>().color = Color.white;
-                _movementBuff = 1;
+            _extraJumps = 1;
+            _extraJumpsValue = 1;
+            _movementBuff = 1;
+            
         }
-
     }
     private void SwitchDirection()
     {

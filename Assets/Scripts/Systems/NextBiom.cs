@@ -49,6 +49,7 @@ public class NextBiom : MonoBehaviour
     }
     private IEnumerator NextScene()
     {
+
         GameObject curtain = GameObject.Find("Curtain");
         if(curtain != null)
         {

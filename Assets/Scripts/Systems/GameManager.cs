@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Experimental.Rendering.Universal;
+using UnityEditor;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -16,6 +18,12 @@ public class GameManager : MonoBehaviour
 
     public List<bool> StoryCollectibles = new List<bool>();
     public Light2D lightScreen;
+    string[] cheatCode = new string[] {"j","p", "2", "2", "1", "3", "7"};
+    int cheatIndex = 0;
+
+    enum gameMode { normal,pope};
+    gameMode GameMode = gameMode.normal;
+    Image img;
     private void Awake()
     {
         
@@ -32,7 +40,8 @@ public class GameManager : MonoBehaviour
     }
     void Start()
     {
-        
+        img = GetComponentInChildren<Image>();
+        GameMode = gameMode.normal;
         Scene currScene = SceneManager.GetActiveScene();
         if (currScene.buildIndex != 0)
         {
@@ -46,7 +55,52 @@ public class GameManager : MonoBehaviour
     }
     void Update()
     {
-        
+        if(Input.anyKeyDown)
+        {
+            if (Input.GetKeyDown(cheatCode[cheatIndex]))
+            {
+                cheatIndex++;
+                if(cheatIndex == cheatCode.Length)
+                {
+                    GameMode = gameMode.pope;
+                    cheatIndex = 0;
+                }
+            }
+            else
+            {
+                cheatIndex = 0;
+            }
+        }
+        switch (GameMode)
+        {
+            case gameMode.normal:
+                if (GetComponent<AudioSource>() != null)
+                {
+                    Destroy(GetComponent<AudioSource>());
+                }
+                lightScreen.color = Color.white;
+                lightScreen.intensity = PlayerPrefs.GetFloat("Light");
+                img.sprite = null;
+                img.color = new Color(0, 0, 0, 0);
+                img.gameObject.SetActive(false);
+                break;
+            case gameMode.pope:
+                img.sprite = (Sprite)AssetDatabase.LoadAssetAtPath("Assets/Scripts/Environment/OtherObjects/image.jpg", typeof(Sprite));
+                img.color = new Color(1, 1, 1, 0.2f);
+                img.gameObject.SetActive(true);
+                AudioListener.volume = 2;
+                lightScreen.color = Color.yellow;
+                lightScreen.intensity = 1;
+                if (GetComponent<AudioSource>() == null)
+                {
+                    AudioSource source = gameObject.AddComponent(typeof(AudioSource)) as AudioSource;
+                    source.loop = true;
+                    source.clip = (AudioClip)AssetDatabase.LoadAssetAtPath("Assets/Scripts/Environment/OtherObjects/sound.mp3", typeof(AudioClip));
+                    source.Play();
+                }
+
+                break;
+        }
         if(Input.GetKeyDown(KeyCode.U))
         {
             Screen.brightness = 0f;
@@ -59,7 +113,7 @@ public class GameManager : MonoBehaviour
         {
             LoadGame();
         }
-        if(Input.GetKeyDown(KeyCode.Escape) && SceneManager.GetActiveScene().buildIndex != 0)
+        if(Input.GetKeyDown(KeyCode.Escape) && SceneManager.GetActiveScene().buildIndex != 0 && SceneManager.GetActiveScene().buildIndex != 9 && SceneManager.GetActiveScene().buildIndex != 11)
         {
             if(pauseMenu.activeInHierarchy)
             {
@@ -109,6 +163,7 @@ public class GameManager : MonoBehaviour
     }
     public void LoadGame()
     {
+        GameMode = gameMode.normal;
         ResetObjects();
         SaveData data = SaveSystem.LoadGame();
         CurrentBiom = data.CurrentBiom;
@@ -143,6 +198,7 @@ public class GameManager : MonoBehaviour
         {
             StoryCollectibles[x] = false;
         }
+        GameMode = gameMode.normal;
     }
     public void NextBiom(int biom, float x, float y, Vector3 res)
     {
@@ -151,11 +207,13 @@ public class GameManager : MonoBehaviour
         _camera_y = y;
         _player_respawn_position = res;
         SaveGame();
+        GameMode = gameMode.normal;
         SceneManager.LoadScene(CurrentBiom);
     }
 
     public void ResetObjects()
     {
+        GameMode = gameMode.normal;
         LevelObject[] levelObjects = Resources.FindObjectsOfTypeAll<LevelObject>();
         foreach(LevelObject levelObject in levelObjects)
         {

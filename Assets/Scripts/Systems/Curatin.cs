@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Curatin : MonoBehaviour
 {
-    public bool In;
     public GameObject curtain;
     private void Start()
     {
@@ -14,15 +13,14 @@ public class Curatin : MonoBehaviour
     {        
         if (curtain != null)
         {
-            if (In)
-            {
-                curtain.GetComponent<Animator>().Play("Base Layer.FadeIn");
-            }
-            else
-            {
-                Debug.Log("asd");
-                curtain.GetComponent<Animator>().Play("Base Layer.FadeOut");
-            }
+            StartCoroutine(CurtainInOut());
         }
+    }
+
+    private IEnumerator CurtainInOut()
+    {
+        curtain.GetComponent<Animator>().Play("Base Layer.FadeIn");
+        yield return new WaitForSeconds(4);
+        curtain.GetComponent<Animator>().Play("Base Layer.FadeOut");
     }
 }

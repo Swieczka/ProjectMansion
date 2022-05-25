@@ -843,7 +843,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cd_start: 0
-  cd_add: 1
+  cd_add: 0.75
   cable: {fileID: 1345251761}
 --- !u!1 &163364614
 GameObject:
@@ -40413,6 +40413,7 @@ GameObject:
   m_Component:
   - component: {fileID: 232934312}
   - component: {fileID: 232934313}
+  - component: {fileID: 232934314}
   m_Layer: 0
   m_Name: Cable
   m_TagString: Spikes
@@ -40486,6 +40487,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &232934314
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 232934311}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 8, y: 8}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1001 &234977066
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44117,7 +44144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cd_start: 0
-  cd_add: 1
+  cd_add: 2
   cable: {fileID: 1307099398}
 --- !u!1001 &810021074
 PrefabInstance:
@@ -54666,6 +54693,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1307099399}
   - component: {fileID: 1307099400}
+  - component: {fileID: 1307099401}
   m_Layer: 0
   m_Name: Cable
   m_TagString: Spikes
@@ -54739,6 +54767,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1307099401
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1307099398}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 8, y: 8}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1312535280
 GameObject:
   m_ObjectHideFlags: 0
@@ -54893,6 +54947,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1345251762}
   - component: {fileID: 1345251763}
+  - component: {fileID: 1345251764}
   m_Layer: 0
   m_Name: Cable
   m_TagString: Spikes
@@ -54966,6 +55021,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1345251764
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345251761}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 8, y: 8}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1345439114
 GameObject:
   m_ObjectHideFlags: 0
@@ -58758,6 +58839,14 @@ PrefabInstance:
     - target: {fileID: 3349123621136057357, guid: c92974e50bb57304aac6e8307b652944, type: 3}
       propertyPath: m_SortingOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5320250570624555129, guid: c92974e50bb57304aac6e8307b652944, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5320250570624555129, guid: c92974e50bb57304aac6e8307b652944, type: 3}
+      propertyPath: m_Simulated
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6693261388457977701, guid: c92974e50bb57304aac6e8307b652944, type: 3}
       propertyPath: m_RootOrder
@@ -63088,7 +63177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cd_start: 0
-  cd_add: 1
+  cd_add: 3
   cable: {fileID: 232934311}
 --- !u!1 &2095841302
 GameObject:
@@ -63373,6 +63462,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2124398757}
   - component: {fileID: 2124398758}
+  - component: {fileID: 2124398759}
   m_Layer: 0
   m_Name: Cable
   m_TagString: Spikes
@@ -63446,6 +63536,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &2124398759
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124398756}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 8, y: 8}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &2130744298
 GameObject:
   m_ObjectHideFlags: 0

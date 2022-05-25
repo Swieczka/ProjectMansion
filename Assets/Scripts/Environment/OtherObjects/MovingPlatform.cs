@@ -42,4 +42,13 @@ public class MovingPlatform : MonoBehaviour
             GetComponent<Rigidbody2D>().velocity = Vector2.left * moveSpeed;
         }
     }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.collider.gameObject.tag == "Player")
+        {
+            GameObject player = collision.collider.gameObject;
+            player.GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x,player.GetComponent<Rigidbody2D>().velocity.y);
+        }
+    }
 }
