@@ -7959,7 +7959,7 @@ PrefabInstance:
     - target: {fileID: 3465892307047188921, guid: f41e4235c15fad342a147ef98dd0ca46, type: 3}
       propertyPath: text_area
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1043961266}
     - target: {fileID: 3465892307047188921, guid: f41e4235c15fad342a147ef98dd0ca46, type: 3}
       propertyPath: collectible_Icon
       value: 
@@ -7967,11 +7967,11 @@ PrefabInstance:
     - target: {fileID: 3465892307047188921, guid: f41e4235c15fad342a147ef98dd0ca46, type: 3}
       propertyPath: message_background
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1043961267}
     - target: {fileID: 3465892307047188921, guid: f41e4235c15fad342a147ef98dd0ca46, type: 3}
       propertyPath: collectible_Picture
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1043961265}
     - target: {fileID: 3465892307047188921, guid: f41e4235c15fad342a147ef98dd0ca46, type: 3}
       propertyPath: message_Text.Array.size
       value: 3
@@ -11818,7 +11818,7 @@ PrefabInstance:
     - target: {fileID: 3465892307047188921, guid: f41e4235c15fad342a147ef98dd0ca46, type: 3}
       propertyPath: text_area
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1043961266}
     - target: {fileID: 3465892307047188921, guid: f41e4235c15fad342a147ef98dd0ca46, type: 3}
       propertyPath: collectible_Icon
       value: 
@@ -11826,11 +11826,11 @@ PrefabInstance:
     - target: {fileID: 3465892307047188921, guid: f41e4235c15fad342a147ef98dd0ca46, type: 3}
       propertyPath: message_background
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1043961267}
     - target: {fileID: 3465892307047188921, guid: f41e4235c15fad342a147ef98dd0ca46, type: 3}
       propertyPath: collectible_Picture
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1043961265}
     - target: {fileID: 3465892307047188921, guid: f41e4235c15fad342a147ef98dd0ca46, type: 3}
       propertyPath: message_Text.Array.size
       value: 3
@@ -14611,7 +14611,7 @@ PrefabInstance:
     - target: {fileID: 3465892307047188921, guid: f41e4235c15fad342a147ef98dd0ca46, type: 3}
       propertyPath: text_area
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1043961266}
     - target: {fileID: 3465892307047188921, guid: f41e4235c15fad342a147ef98dd0ca46, type: 3}
       propertyPath: collectible_Icon
       value: 
@@ -14619,11 +14619,11 @@ PrefabInstance:
     - target: {fileID: 3465892307047188921, guid: f41e4235c15fad342a147ef98dd0ca46, type: 3}
       propertyPath: message_background
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1043961267}
     - target: {fileID: 3465892307047188921, guid: f41e4235c15fad342a147ef98dd0ca46, type: 3}
       propertyPath: collectible_Picture
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1043961265}
     - target: {fileID: 3465892307047188921, guid: f41e4235c15fad342a147ef98dd0ca46, type: 3}
       propertyPath: message_Text.Array.size
       value: 2
@@ -15733,7 +15733,7 @@ PrefabInstance:
     - target: {fileID: 3465892307047188921, guid: f41e4235c15fad342a147ef98dd0ca46, type: 3}
       propertyPath: text_area
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1043961266}
     - target: {fileID: 3465892307047188921, guid: f41e4235c15fad342a147ef98dd0ca46, type: 3}
       propertyPath: collectible_Icon
       value: 
@@ -15741,11 +15741,11 @@ PrefabInstance:
     - target: {fileID: 3465892307047188921, guid: f41e4235c15fad342a147ef98dd0ca46, type: 3}
       propertyPath: message_background
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1043961267}
     - target: {fileID: 3465892307047188921, guid: f41e4235c15fad342a147ef98dd0ca46, type: 3}
       propertyPath: collectible_Picture
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1043961265}
     - target: {fileID: 3465892307047188921, guid: f41e4235c15fad342a147ef98dd0ca46, type: 3}
       propertyPath: message_Text.Array.size
       value: 3
@@ -18948,6 +18948,39 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3015430478270545788, guid: 20e483403ffc10043a0c0c84f32c3700, type: 3}
   m_PrefabInstance: {fileID: 1043961263}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1043961265 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3015430478317075897, guid: 20e483403ffc10043a0c0c84f32c3700, type: 3}
+  m_PrefabInstance: {fileID: 1043961263}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1043961266 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3015430479430108816, guid: 20e483403ffc10043a0c0c84f32c3700, type: 3}
+  m_PrefabInstance: {fileID: 1043961263}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1043961267 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3015430478270545791, guid: 20e483403ffc10043a0c0c84f32c3700, type: 3}
+  m_PrefabInstance: {fileID: 1043961263}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1044683014
 GameObject:
   m_ObjectHideFlags: 0
@@ -19067,6 +19100,7 @@ MonoBehaviour:
   _player_respawn_position: {x: 0, y: 0, z: 0}
   StoryCollectibles: 0101
   lightScreen: {fileID: 0}
+  mixer: {fileID: 0}
 --- !u!4 &1045380348
 Transform:
   m_ObjectHideFlags: 0
@@ -24394,7 +24428,7 @@ PrefabInstance:
     - target: {fileID: 3465892307047188921, guid: f41e4235c15fad342a147ef98dd0ca46, type: 3}
       propertyPath: text_area
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1043961266}
     - target: {fileID: 3465892307047188921, guid: f41e4235c15fad342a147ef98dd0ca46, type: 3}
       propertyPath: collectible_Icon
       value: 
@@ -24402,11 +24436,11 @@ PrefabInstance:
     - target: {fileID: 3465892307047188921, guid: f41e4235c15fad342a147ef98dd0ca46, type: 3}
       propertyPath: message_background
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1043961267}
     - target: {fileID: 3465892307047188921, guid: f41e4235c15fad342a147ef98dd0ca46, type: 3}
       propertyPath: collectible_Picture
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1043961265}
     - target: {fileID: 3465892307047188921, guid: f41e4235c15fad342a147ef98dd0ca46, type: 3}
       propertyPath: message_Text.Array.size
       value: 2
@@ -28677,7 +28711,7 @@ PrefabInstance:
     - target: {fileID: 3465892307047188921, guid: f41e4235c15fad342a147ef98dd0ca46, type: 3}
       propertyPath: text_area
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1043961266}
     - target: {fileID: 3465892307047188921, guid: f41e4235c15fad342a147ef98dd0ca46, type: 3}
       propertyPath: collectible_Icon
       value: 
@@ -28685,11 +28719,11 @@ PrefabInstance:
     - target: {fileID: 3465892307047188921, guid: f41e4235c15fad342a147ef98dd0ca46, type: 3}
       propertyPath: message_background
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1043961267}
     - target: {fileID: 3465892307047188921, guid: f41e4235c15fad342a147ef98dd0ca46, type: 3}
       propertyPath: collectible_Picture
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1043961265}
     - target: {fileID: 3465892307047188921, guid: f41e4235c15fad342a147ef98dd0ca46, type: 3}
       propertyPath: message_Text.Array.size
       value: 2
@@ -91773,7 +91807,7 @@ PrefabInstance:
     - target: {fileID: 3465892307047188921, guid: f41e4235c15fad342a147ef98dd0ca46, type: 3}
       propertyPath: text_area
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1043961266}
     - target: {fileID: 3465892307047188921, guid: f41e4235c15fad342a147ef98dd0ca46, type: 3}
       propertyPath: collectible_Icon
       value: 
@@ -91781,11 +91815,11 @@ PrefabInstance:
     - target: {fileID: 3465892307047188921, guid: f41e4235c15fad342a147ef98dd0ca46, type: 3}
       propertyPath: message_background
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1043961267}
     - target: {fileID: 3465892307047188921, guid: f41e4235c15fad342a147ef98dd0ca46, type: 3}
       propertyPath: collectible_Picture
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1043961265}
     - target: {fileID: 3465892307047188921, guid: f41e4235c15fad342a147ef98dd0ca46, type: 3}
       propertyPath: message_Text.Array.size
       value: 2

@@ -52,8 +52,8 @@ public class Pipe : Puzzle
 
     public override void ObjectReset()
     {
-        _state = start_state;
-        gameObject.transform.eulerAngles = new Vector3(0, 0, start_state * -90);
-        PuzzleCheck();
+      //  _state = start_state;
+      // gameObject.transform.eulerAngles = new Vector3(0, 0, start_state * -90);
+      //  PuzzleCheck();
     }
 }

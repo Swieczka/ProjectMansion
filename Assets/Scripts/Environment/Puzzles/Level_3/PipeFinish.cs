@@ -23,7 +23,7 @@ public class PipeFinish : LevelObject
 
     public override void ObjectReset()
     {
-        WallCollider.enabled = true;
-        GetComponent<SpriteRenderer>().enabled = true;
+       // WallCollider.enabled = true;
+       // GetComponent<SpriteRenderer>().enabled = true;
     }
 }
