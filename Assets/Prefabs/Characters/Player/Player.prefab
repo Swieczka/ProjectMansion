@@ -181,6 +181,7 @@ MonoBehaviour:
   _maxMoveSpeed: 8
   _maxMoveSpeedInit: 8
   _groundLinearDrag: 17
+  _groundLinearDragTemp: 0
   _horizontalDirection: 0
   _verticalDirection: 0
   _facingRight: 1
@@ -197,7 +198,7 @@ MonoBehaviour:
   _groundRaycastLength: 0.8
   _onGround: 0
   _dashSpeed: 15
-  _dashLength: 0.3
+  _dashLength: 0.4
   _dashBufferLength: 0.1
   _dashBufferCounter: 0
   _isDashing: 0
@@ -208,6 +209,7 @@ MonoBehaviour:
   _JumpRes: 1
   _DashRes: 1
   _DoubleJumpRes: 1
+  CutScene: 0
 --- !u!95 &6978923607735090218
 Animator:
   serializedVersion: 3

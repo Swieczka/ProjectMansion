@@ -43,7 +43,7 @@ public class Dialogue : MonoBehaviour
         text_area.text = "";
         dialogue_index = 0;
         canSkip = true;
-    skip_index = 0;
+        skip_index = 0;
         StartCoroutine(StartDialogue());
     }
 

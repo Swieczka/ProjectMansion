@@ -17,10 +17,13 @@ public class Curatin : MonoBehaviour
         }
     }
 
+
     private IEnumerator CurtainInOut()
     {
+        curtain.GetComponent<Animator>().SetFloat("Multiplier", 2.2f);
         curtain.GetComponent<Animator>().Play("Base Layer.FadeIn");
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(3);
+        curtain.GetComponent<Animator>().SetFloat("Multiplier", 1f);
         curtain.GetComponent<Animator>().Play("Base Layer.FadeOut");
     }
 }

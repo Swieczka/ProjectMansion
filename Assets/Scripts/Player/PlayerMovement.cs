@@ -83,7 +83,10 @@ public class PlayerMovement : MonoBehaviour
      
     void Update()
     {
-        
+        if(!_MoveRes)
+        {
+            _rb.velocity = Vector2.zero;
+        }
         _horizontalDirection = GetInput().x;
         _verticalDirection = GetInput().y;
         
@@ -232,12 +235,19 @@ public class PlayerMovement : MonoBehaviour
         _rb.velocity = Vector2.zero;
         _rb.gravityScale = 0f;
         _rb.drag = 0f;
+        animator.SetBool("isSliding", true);
         if(_onGround)
         {
             isCrouching = true;
             _slideCollider.enabled = true;
             _walkCollider.enabled = false;
+            animator.SetTrigger("Slide");
         }
+        else
+        {
+            animator.SetTrigger("Dash");
+        }
+
         Vector2 dir;
         if(x!=0f)
         {
@@ -254,6 +264,7 @@ public class PlayerMovement : MonoBehaviour
             yield return null;
         }
         _isDashing = false;
+        animator.SetBool("isSliding", false);
         yield return new WaitForSeconds(1f);
         _hasDashed = false;
     }

@@ -10516,6 +10516,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1767627227}
     m_Modifications:
+    - target: {fileID: 5787451424450285240, guid: 33cf9247cad20dd4bb6e723cce8516fa, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5787451424450285241, guid: 33cf9247cad20dd4bb6e723cce8516fa, type: 3}
       propertyPath: m_Name
       value: PushingPainting_#4
@@ -13674,6 +13678,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1767627227}
     m_Modifications:
+    - target: {fileID: 5787451424450285240, guid: 33cf9247cad20dd4bb6e723cce8516fa, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5787451424450285240, guid: 33cf9247cad20dd4bb6e723cce8516fa, type: 3}
       propertyPath: m_GravityScale
       value: 0
@@ -77542,6 +77550,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1767627227}
     m_Modifications:
+    - target: {fileID: 5787451424450285240, guid: 33cf9247cad20dd4bb6e723cce8516fa, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5787451424450285241, guid: 33cf9247cad20dd4bb6e723cce8516fa, type: 3}
       propertyPath: m_Name
       value: PushingPainting_#2
@@ -92005,6 +92017,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1767627227}
     m_Modifications:
+    - target: {fileID: 5787451424450285240, guid: 33cf9247cad20dd4bb6e723cce8516fa, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5787451424450285241, guid: 33cf9247cad20dd4bb6e723cce8516fa, type: 3}
       propertyPath: m_Name
       value: PushingPainting_#3

@@ -103,11 +103,11 @@ public class GameManager : MonoBehaviour
         }
         if(Input.GetKeyDown(KeyCode.U))
         {
-            Screen.brightness = 0f;
+            LockMovement(true);
         }
         if (Input.GetKeyDown(KeyCode.J))
         {
-            Screen.brightness = 1f;
+            LockMovement(false);
         }
         if (Input.GetKeyDown(KeyCode.R))
         {
@@ -224,6 +224,7 @@ public class GameManager : MonoBehaviour
     public void LockMovement(bool _lock)
     {
         GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>()._MoveRes = !_lock;
+        Debug.Log(!_lock);
     }
 
     public void LightIntensity()
