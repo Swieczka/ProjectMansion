@@ -9,7 +9,7 @@ public class PressurePLate : LevelObject
     {
         GetComponent<Animator>().SetFloat("AnimSpeed", 1f);
         GetComponent<Animator>().PlayInFixedTime("Base Layer.Pressed");
-        if (collision.gameObject.tag == "Player" || collision.gameObject.GetComponent<LevelObject>() != null || collision.gameObject.tag == "Pressable")
+        if (collision.gameObject.GetComponent<LevelObject>() != null || collision.gameObject.tag == "Pressable")
         {
             if(GetComponent<AudioSource>() != null)
             {
@@ -23,7 +23,7 @@ public class PressurePLate : LevelObject
     {
         GetComponent<Animator>().SetFloat("AnimSpeed", -1f);
         GetComponent<Animator>().PlayInFixedTime("Base Layer.Pressed");
-        if (collision.gameObject.tag == "Player" || collision.gameObject.GetComponent<LevelObject>() != null || collision.gameObject.tag == "Pressable")
+        if (collision.gameObject.GetComponent<LevelObject>() != null || collision.gameObject.tag == "Pressable")
         {
             Action();
         }

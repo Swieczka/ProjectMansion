@@ -17,7 +17,6 @@ public class SoundTrigger : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player" && Time.time > cooldown + cooldownBase)
         {
-            Debug.Log(audioSource.clip.name + " is playing");
             cooldown = Time.time;
             audioSource.Play();
         }
