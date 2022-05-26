@@ -100,17 +100,9 @@ public class GameManager : MonoBehaviour
                     source.clip = (AudioClip)AssetDatabase.LoadAssetAtPath("Assets/Scripts/Environment/OtherObjects/sound.mp3", typeof(AudioClip));
                     source.Play();
                 }
-
                 break;
         }
-        if(Input.GetKeyDown(KeyCode.U))
-        {
-            LockMovement(true);
-        }
-        if (Input.GetKeyDown(KeyCode.J))
-        {
-            LockMovement(false);
-        }
+       
         if (Input.GetKeyDown(KeyCode.R))
         {
             LoadGame();
