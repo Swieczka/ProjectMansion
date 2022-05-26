@@ -5,17 +5,19 @@ using UnityEngine;
 public class SoundTrigger : MonoBehaviour
 {
     public AudioSource audioSource;
-    float cooldown;
-    float cooldownBase;
+    public float cooldown;
+    public float cooldownBase;
     private void Start()
     {
-        cooldown = Time.time;
+        
         cooldownBase = 4;
+        cooldown = Time.time-cooldownBase;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "Player" && Time.time > cooldown + cooldownBase)
         {
+            Debug.Log(audioSource.clip.name + " is playing");
             cooldown = Time.time;
             audioSource.Play();
         }

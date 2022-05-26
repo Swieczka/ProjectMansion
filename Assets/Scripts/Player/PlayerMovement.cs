@@ -216,6 +216,7 @@ public class PlayerMovement : MonoBehaviour
             }
             if (!(_left_check || _right_check || _up_check))
             {
+                animator.SetBool("isCrouching", false);
                 isCrouching = false;
                 _maxMoveSpeed = _maxMoveSpeedInit;
                 _slideCollider.enabled = false;
