@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Experimental.Rendering.Universal;
 using UnityEditor;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class GameManager : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class GameManager : MonoBehaviour
     string[] cheatCode = new string[] {"j","p", "2", "2", "1", "3", "7"};
     int cheatIndex = 0;
 
+    public AudioMixer mixer;
     enum gameMode { normal,pope};
     gameMode GameMode = gameMode.normal;
     Image img;
@@ -232,8 +234,13 @@ public class GameManager : MonoBehaviour
         lightScreen.intensity = PlayerPrefs.GetFloat("Light");
     }
 
-    public void SoundVolume()
+    public void SoundVolume(float num)
     {
-        AudioListener.volume = PlayerPrefs.GetFloat("Sound", 1);
+        mixer.SetFloat("MusicVol",num);
+    }
+
+    public void SFXVolume(float num)
+    {
+        mixer.SetFloat("SFXVol", num);
     }
 }

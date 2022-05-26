@@ -96,6 +96,12 @@ public class MenuManager : MonoBehaviour
     public void ChangeVolume()
     {
         PlayerPrefs.SetFloat("Sound", GetComponent<Slider>().value);
-        GameManager.instance.SoundVolume();
+        GameManager.instance.SoundVolume(GetComponent<Slider>().value);
+    }
+
+    public void ChangeSFX()
+    {
+        PlayerPrefs.SetFloat("SFX", GetComponent<Slider>().value);
+        GameManager.instance.SFXVolume(GetComponent<Slider>().value);
     }
 }

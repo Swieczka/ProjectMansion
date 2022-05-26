@@ -20,4 +20,10 @@ public class PipeFinish : LevelObject
             collision.gameObject.transform.SetPositionAndRotation(tpToTransform.position, tpToTransform.rotation);
         }
     }
+
+    public override void ObjectReset()
+    {
+        WallCollider.enabled = true;
+        GetComponent<SpriteRenderer>().enabled = true;
+    }
 }
